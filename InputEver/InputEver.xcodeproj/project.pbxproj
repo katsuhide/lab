@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42B6C09F173FFFAA008CD118 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B6C09E173FFFAA008CD118 /* Cocoa.framework */; };
+		42B6C0A9173FFFAA008CD118 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42B6C0A7173FFFAA008CD118 /* InfoPlist.strings */; };
+		42B6C0AB173FFFAA008CD118 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B6C0AA173FFFAA008CD118 /* main.m */; };
+		42B6C0AF173FFFAA008CD118 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 42B6C0AD173FFFAA008CD118 /* Credits.rtf */; };
+		42B6C0B2173FFFAA008CD118 /* IEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B6C0B1173FFFAA008CD118 /* IEAppDelegate.m */; };
+		42B6C0B5173FFFAA008CD118 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B6C0B3173FFFAA008CD118 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		42B6C09B173FFFAA008CD118 /* InputEver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InputEver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42B6C09E173FFFAA008CD118 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		42B6C0A1173FFFAA008CD118 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		42B6C0A2173FFFAA008CD118 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		42B6C0A3173FFFAA008CD118 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		42B6C0A6173FFFAA008CD118 /* InputEver-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InputEver-Info.plist"; sourceTree = "<group>"; };
+		42B6C0A8173FFFAA008CD118 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		42B6C0AA173FFFAA008CD118 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		42B6C0AC173FFFAA008CD118 /* InputEver-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InputEver-Prefix.pch"; sourceTree = "<group>"; };
+		42B6C0AE173FFFAA008CD118 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		42B6C0B0173FFFAA008CD118 /* IEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IEAppDelegate.h; sourceTree = "<group>"; };
+		42B6C0B1173FFFAA008CD118 /* IEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IEAppDelegate.m; sourceTree = "<group>"; };
+		42B6C0B4173FFFAA008CD118 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42B6C098173FFFAA008CD118 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B6C09F173FFFAA008CD118 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42B6C092173FFFAA008CD118 = {
+			isa = PBXGroup;
+			children = (
+				42B6C0A4173FFFAA008CD118 /* InputEver */,
+				42B6C09D173FFFAA008CD118 /* Frameworks */,
+				42B6C09C173FFFAA008CD118 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42B6C09C173FFFAA008CD118 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42B6C09B173FFFAA008CD118 /* InputEver.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42B6C09D173FFFAA008CD118 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42B6C09E173FFFAA008CD118 /* Cocoa.framework */,
+				42B6C0A0173FFFAA008CD118 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42B6C0A0173FFFAA008CD118 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42B6C0A1173FFFAA008CD118 /* AppKit.framework */,
+				42B6C0A2173FFFAA008CD118 /* CoreData.framework */,
+				42B6C0A3173FFFAA008CD118 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		42B6C0A4173FFFAA008CD118 /* InputEver */ = {
+			isa = PBXGroup;
+			children = (
+				42B6C0B0173FFFAA008CD118 /* IEAppDelegate.h */,
+				42B6C0B1173FFFAA008CD118 /* IEAppDelegate.m */,
+				42B6C0B3173FFFAA008CD118 /* MainMenu.xib */,
+				42B6C0A5173FFFAA008CD118 /* Supporting Files */,
+			);
+			path = InputEver;
+			sourceTree = "<group>";
+		};
+		42B6C0A5173FFFAA008CD118 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42B6C0A6173FFFAA008CD118 /* InputEver-Info.plist */,
+				42B6C0A7173FFFAA008CD118 /* InfoPlist.strings */,
+				42B6C0AA173FFFAA008CD118 /* main.m */,
+				42B6C0AC173FFFAA008CD118 /* InputEver-Prefix.pch */,
+				42B6C0AD173FFFAA008CD118 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42B6C09A173FFFAA008CD118 /* InputEver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42B6C0B8173FFFAA008CD118 /* Build configuration list for PBXNativeTarget "InputEver" */;
+			buildPhases = (
+				42B6C097173FFFAA008CD118 /* Sources */,
+				42B6C098173FFFAA008CD118 /* Frameworks */,
+				42B6C099173FFFAA008CD118 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InputEver;
+			productName = InputEver;
+			productReference = 42B6C09B173FFFAA008CD118 /* InputEver.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42B6C093173FFFAA008CD118 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IE;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = com.katzlifehack;
+			};
+			buildConfigurationList = 42B6C096173FFFAA008CD118 /* Build configuration list for PBXProject "InputEver" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 42B6C092173FFFAA008CD118;
+			productRefGroup = 42B6C09C173FFFAA008CD118 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42B6C09A173FFFAA008CD118 /* InputEver */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42B6C099173FFFAA008CD118 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B6C0A9173FFFAA008CD118 /* InfoPlist.strings in Resources */,
+				42B6C0AF173FFFAA008CD118 /* Credits.rtf in Resources */,
+				42B6C0B5173FFFAA008CD118 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42B6C097173FFFAA008CD118 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B6C0AB173FFFAA008CD118 /* main.m in Sources */,
+				42B6C0B2173FFFAA008CD118 /* IEAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		42B6C0A7173FFFAA008CD118 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42B6C0A8173FFFAA008CD118 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		42B6C0AD173FFFAA008CD118 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42B6C0AE173FFFAA008CD118 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		42B6C0B3173FFFAA008CD118 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42B6C0B4173FFFAA008CD118 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42B6C0B6173FFFAA008CD118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		42B6C0B7173FFFAA008CD118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		42B6C0B9173FFFAA008CD118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InputEver/InputEver-Prefix.pch";
+				INFOPLIST_FILE = "InputEver/InputEver-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		42B6C0BA173FFFAA008CD118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InputEver/InputEver-Prefix.pch";
+				INFOPLIST_FILE = "InputEver/InputEver-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42B6C096173FFFAA008CD118 /* Build configuration list for PBXProject "InputEver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42B6C0B6173FFFAA008CD118 /* Debug */,
+				42B6C0B7173FFFAA008CD118 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42B6C0B8173FFFAA008CD118 /* Build configuration list for PBXNativeTarget "InputEver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42B6C0B9173FFFAA008CD118 /* Debug */,
+				42B6C0BA173FFFAA008CD118 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42B6C093173FFFAA008CD118 /* Project object */;
+}
