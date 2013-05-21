@@ -4,13 +4,19 @@ $LOAD_PATH.push(Dir::pwd)
 
 require "add_note"
 
-data = Hash.new
-data.store('title', "textField.stringValue")
-data.store('tag', ["test"])
-data.store('notebook', "")
-filename = "/Users/AirMyac/Desktop/fuga.txt"
-data.store('path', filename)
-post_note(data)
+def create_data()
+	data = Hash.new
+	data.store('title', "textField.stringValue")
+	data.store('tag', ["test"])
+	data.store('notebook', "")
+	filename = "/Users/AirMyac/Desktop/fuga.txt"
+	data.store('path', filename)
 
-post_note(data)
-		
+	return data
+end
+
+authToken = login()
+noteStore = create_noteStore(authToken)
+notebooks = get_notebook_list(authToken, noteStore)
+note = create_note(create_data())
+post(authToken, noteStore, note)
