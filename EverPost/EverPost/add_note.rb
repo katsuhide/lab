@@ -1,8 +1,9 @@
 # encoding: utf-8
 require "digest/md5"
 require 'evernote_oauth'
+require 'mimemagic'
 
-def post_note(note_title)
+def post_note(note_data)
 
 # Real applications authenticate with Evernote using OAuth, but for the
 # purpose of exploring the API, you can get a developer token that allows
@@ -59,35 +60,40 @@ puts
 # To create a new note, simply create a new Note object and fill in
 # attributes such as the note's title.
 note = Evernote::EDAM::Type::Note.new
-note.title = note_title
-note.tagNames = ["macruby"]
+# note.title = "debug title"
+# note.tagNames = ["macruby"]
+note.title = note_data.fetch('title')
+note.tagNames = note_data.fetch('tag')
 
 # To include an attachment such as an image in a note, first create a Resource
 # for the attachment. At a minimum, the Resource contains the binary attachment
 # data, an MD5 hash of the binary data, and the attachment MIME type. It can also
 #/ include attributes such as filename and location.
-# filename = "enlogo.png"
-# image = File.open(filename, "rb") { |io| io.read }
-# hashFunc = Digest::MD5.new
+# filename = "/Users/AirMyac/Desktop/fuga.txt"
+filename = note_data.fetch('path')
+mime_type = MimeMagic.by_path(filename).to_s
+base_name = File.basename(filename)
+image = File.open(filename, "rb") { |io| io.read }
+hashFunc = Digest::MD5.new
 
-# data = Evernote::EDAM::Type::Data.new
-# data.size = image.size
-# data.bodyHash = hashFunc.digest(image)
-# data.body = image
+data = Evernote::EDAM::Type::Data.new
+data.size = image.size
+data.bodyHash = hashFunc.digest(image)
+data.body = image
 
-# resource = Evernote::EDAM::Type::Resource.new
-# resource.mime = "image/png"
-# resource.data = data
-# resource.attributes = Evernote::EDAM::Type::ResourceAttributes.new
-# resource.attributes.fileName = filename
+resource = Evernote::EDAM::Type::Resource.new
+resource.mime = mime_type
+resource.data = data
+resource.attributes = Evernote::EDAM::Type::ResourceAttributes.new
+resource.attributes.fileName = base_name 
 
 # Now, add the new Resource to the note's list of resources
-# note.resources = [ resource ]
+note.resources = [ resource ]
 
 # To display the Resource as part of the note's content, include an <en-media>
 # tag in the note's ENML content. The en-media tag identifies the corresponding
 # Resource using the MD5 hash.
-# hashHex = hashFunc.hexdigest(image)
+hashHex = hashFunc.hexdigest(image)
 
 # The content of an Evernote note is represented using Evernote Markup Language
 # (ENML). The full ENML specification can be found in the Evernote API Overview
@@ -96,6 +102,7 @@ note.content = <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>This is MacRuby's Test!!<br/>
+  <en-media type="#{mime_type}" hash="#{hashHex}"/>
 </en-note>
 EOF
 
@@ -107,4 +114,3 @@ createdNote = noteStore.createNote(authToken, note)
 puts "Successfully created a new note with GUID: #{createdNote.guid}"
 
 end
-
