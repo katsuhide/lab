@@ -13,6 +13,8 @@ $LOAD_PATH.push(path)
 
 require "add_note"
 
+@conffile = "evernote.yaml"
+
 class AppDelegate
     attr_accessor :window
     attr_accessor :textField
@@ -25,7 +27,7 @@ class AppDelegate
     end
    
    	def post_evernote(sender)
-   		authToken = login()
+   		authToken = login(@conffile)
 		noteStore = create_noteStore(authToken)
    		data = Hash.new
    		data.store('title', textField.stringValue)
@@ -43,14 +45,14 @@ class AppDelegate
    	def get(sender)
    		puts textField.stringValue
    		puts combo_box.stringValue
-   		authToken = login()
+   		authToken = login(@conffile)
 		noteStore = create_noteStore(authToken)
 		puts get_notebook_guid(combo_box.stringValue, authToken, noteStore)
    	end
 
    	# 画面の更新 
    	def refresh()
-		authToken = login()
+		authToken = login(@conffile)
 		noteStore = create_noteStore(authToken)
 		notebooks = get_notebook_list(authToken, noteStore)
 	    notebooks.each do |notebook|

@@ -2,11 +2,11 @@
 require "digest/md5"
 require 'evernote_oauth'
 require 'mimemagic'
+require 'yaml'
 
-
-def login()
+def login(filename)
 	# tokenの設定
-	authToken = "S=s1:U=52d8f:E=144f9fd7003:C=13da24c4404:P=1cd:A=en-devtoken:V=2:H=103adc60d84f44dccc1455d8b7ca165d"
+	authToken = YAML.load_file(filename).fetch('authToken')
 	# tokenのチェック
 	if authToken == "your developer token"
 		puts "Please fill in your developer token"
