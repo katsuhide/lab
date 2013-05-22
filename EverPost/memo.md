@@ -21,4 +21,6 @@
 ## 課題
 * evernoteへpostするためのrbをrquireする際のパスの指定が固定
 * evernoteAPIを叩くための各種ファイルのrquireをどうするか（今は.rbenv
+* authTokenの設定ファイルのパスがフルパス
+* ログイン認証をちゃんとやる
 * 複数ファイルの添付を可能にする

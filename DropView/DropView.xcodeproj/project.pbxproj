@@ -1,0 +1,384 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42491E1D174CF12400A1605E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42491E1C174CF12400A1605E /* Cocoa.framework */; };
+		42491E1F174CF12400A1605E /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42491E1E174CF12400A1605E /* MacRuby.framework */; };
+		42491E28174CF12400A1605E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42491E26174CF12400A1605E /* InfoPlist.strings */; };
+		42491E2A174CF12400A1605E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42491E29174CF12400A1605E /* main.m */; };
+		42491E2F174CF12400A1605E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42491E2D174CF12400A1605E /* MainMenu.xib */; };
+		42491E32174CF12400A1605E /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 42491E31174CF12400A1605E /* rb_main.rb */; };
+		42491E34174CF12400A1605E /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 42491E33174CF12400A1605E /* AppDelegate.rb */; };
+		42CB6FF7174D213000CB4828 /* DropView.m.bk in Sources */ = {isa = PBXBuildFile; fileRef = 42CB6FF6174D213000CB4828 /* DropView.m.bk */; };
+		42CB6FF9174D2BBC00CB4828 /* DropView2.rb in Resources */ = {isa = PBXBuildFile; fileRef = 42CB6FF8174D2BBC00CB4828 /* DropView2.rb */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		42491E21174CF12400A1605E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42491E11174CF12400A1605E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42491E18174CF12400A1605E;
+			remoteInfo = DropView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		42491E19174CF12400A1605E /* DropView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42491E1C174CF12400A1605E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		42491E1E174CF12400A1605E /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
+		42491E25174CF12400A1605E /* DropView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropView-Info.plist"; sourceTree = "<group>"; };
+		42491E27174CF12400A1605E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		42491E29174CF12400A1605E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		42491E2B174CF12400A1605E /* DropView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DropView-Prefix.pch"; sourceTree = "<group>"; };
+		42491E2E174CF12400A1605E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		42491E31174CF12400A1605E /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		42491E33174CF12400A1605E /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		42CB6FF5174D213000CB4828 /* DropView.h.bk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DropView.h.bk; sourceTree = "<group>"; };
+		42CB6FF6174D213000CB4828 /* DropView.m.bk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DropView.m.bk; sourceTree = "<group>"; };
+		42CB6FF8174D2BBC00CB4828 /* DropView2.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = DropView2.rb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42491E16174CF12400A1605E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42491E1D174CF12400A1605E /* Cocoa.framework in Frameworks */,
+				42491E1F174CF12400A1605E /* MacRuby.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42491E10174CF12400A1605E = {
+			isa = PBXGroup;
+			children = (
+				42491E23174CF12400A1605E /* DropView */,
+				42491E1B174CF12400A1605E /* Frameworks */,
+				42491E1A174CF12400A1605E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42491E1A174CF12400A1605E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42491E19174CF12400A1605E /* DropView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42491E1B174CF12400A1605E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42491E1C174CF12400A1605E /* Cocoa.framework */,
+				42491E1E174CF12400A1605E /* MacRuby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42491E23174CF12400A1605E /* DropView */ = {
+			isa = PBXGroup;
+			children = (
+				42491E33174CF12400A1605E /* AppDelegate.rb */,
+				42491E2C174CF12400A1605E /* Resources */,
+				42491E30174CF12400A1605E /* Other Sources */,
+				42491E24174CF12400A1605E /* Supporting Files */,
+				42CB6FF5174D213000CB4828 /* DropView.h.bk */,
+				42CB6FF6174D213000CB4828 /* DropView.m.bk */,
+				42CB6FF8174D2BBC00CB4828 /* DropView2.rb */,
+			);
+			path = DropView;
+			sourceTree = "<group>";
+		};
+		42491E24174CF12400A1605E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42491E25174CF12400A1605E /* DropView-Info.plist */,
+				42491E26174CF12400A1605E /* InfoPlist.strings */,
+				42491E29174CF12400A1605E /* main.m */,
+				42491E2B174CF12400A1605E /* DropView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42491E2C174CF12400A1605E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				42491E2D174CF12400A1605E /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		42491E30174CF12400A1605E /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				42491E31174CF12400A1605E /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		42491E20174CF12400A1605E /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed";
+			buildConfigurationList = 42491E3A174CF12400A1605E /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			dependencies = (
+				42491E22174CF12400A1605E /* PBXTargetDependency */,
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		42491E18174CF12400A1605E /* DropView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42491E37174CF12400A1605E /* Build configuration list for PBXNativeTarget "DropView" */;
+			buildPhases = (
+				42491E15174CF12400A1605E /* Sources */,
+				42491E16174CF12400A1605E /* Frameworks */,
+				42491E17174CF12400A1605E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DropView;
+			productName = DropView;
+			productReference = 42491E19174CF12400A1605E /* DropView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42491E11174CF12400A1605E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = com.katzlifehack;
+			};
+			buildConfigurationList = 42491E14174CF12400A1605E /* Build configuration list for PBXProject "DropView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 42491E10174CF12400A1605E;
+			productRefGroup = 42491E1A174CF12400A1605E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42491E18174CF12400A1605E /* DropView */,
+				42491E20174CF12400A1605E /* Deployment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42491E17174CF12400A1605E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42491E28174CF12400A1605E /* InfoPlist.strings in Resources */,
+				42491E2F174CF12400A1605E /* MainMenu.xib in Resources */,
+				42491E32174CF12400A1605E /* rb_main.rb in Resources */,
+				42491E34174CF12400A1605E /* AppDelegate.rb in Resources */,
+				42CB6FF9174D2BBC00CB4828 /* DropView2.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42491E15174CF12400A1605E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42491E2A174CF12400A1605E /* main.m in Sources */,
+				42CB6FF7174D213000CB4828 /* DropView.m.bk in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42491E22174CF12400A1605E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42491E18174CF12400A1605E /* DropView */;
+			targetProxy = 42491E21174CF12400A1605E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		42491E26174CF12400A1605E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42491E27174CF12400A1605E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		42491E2D174CF12400A1605E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42491E2E174CF12400A1605E /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42491E35174CF12400A1605E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		42491E36174CF12400A1605E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		42491E38174CF12400A1605E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					/Library/Frameworks,
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DropView/DropView-Prefix.pch";
+				INFOPLIST_FILE = "DropView/DropView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		42491E39174CF12400A1605E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					/Library/Frameworks,
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DropView/DropView-Prefix.pch";
+				INFOPLIST_FILE = "DropView/DropView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		42491E3B174CF12400A1605E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		42491E3C174CF12400A1605E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42491E14174CF12400A1605E /* Build configuration list for PBXProject "DropView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42491E35174CF12400A1605E /* Debug */,
+				42491E36174CF12400A1605E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42491E37174CF12400A1605E /* Build configuration list for PBXNativeTarget "DropView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42491E38174CF12400A1605E /* Debug */,
+				42491E39174CF12400A1605E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42491E3A174CF12400A1605E /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42491E3B174CF12400A1605E /* Debug */,
+				42491E3C174CF12400A1605E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42491E11174CF12400A1605E /* Project object */;
+}

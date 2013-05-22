@@ -30,8 +30,8 @@ def create_noteStore(authToken)
 	versionOK = userStore.checkVersion("Evernote EDAMTest (Ruby)",
 					   Evernote::EDAM::UserStore::EDAM_VERSION_MAJOR,
 					   Evernote::EDAM::UserStore::EDAM_VERSION_MINOR)
-	puts "Is my Evernote API version up to date?  #{versionOK}"
-	puts
+	# puts "Is my Evernote API version up to date?  #{versionOK}"
+	# puts
 	exit(1) unless versionOK
 
 	# Create NoteStore

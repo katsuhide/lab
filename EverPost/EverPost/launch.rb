@@ -20,4 +20,5 @@ authToken = login(conffile)
 noteStore = create_noteStore(authToken)
 notebooks = get_notebook_list(authToken, noteStore)
 note = create_note(create_data())
-post(authToken, noteStore, note)
+puts note
+# post(authToken, noteStore, note)

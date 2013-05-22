@@ -8,21 +8,21 @@
 # encoding: utf-8
 require 'rubygems'
 path = "/Users/AirMyac/github/lab/EverPost/EverPost"
-$LOAD_PATH.push(Dir::pwd) 
+$LOAD_PATH.push(Dir::pwd)	 
 $LOAD_PATH.push(path) 
 
 require "add_note"
 
-@conffile = "evernote.yaml"
-
 class AppDelegate
     attr_accessor :window
     attr_accessor :textField
+    attr_accessor :tagField
     attr_accessor :pathField
     attr_accessor :combo_box
 
     def applicationDidFinishLaunching(a_notification)
         # Insert code here to initialize your application
+		@conffile = "/Users/AirMyac/github/lab/EverPost/EverPost/evernote.yaml"
 	    refresh()
     end
    
@@ -31,7 +31,7 @@ class AppDelegate
 		noteStore = create_noteStore(authToken)
    		data = Hash.new
    		data.store('title', textField.stringValue)
-   		data.store('tag', ["test"])
+   		data.store('tag', tagField.stringValue.split(','))
 		data.store('notebook', get_notebook_guid(combo_box.stringValue, authToken, noteStore))
    		data.store('path', pathField.stringValue)
 		note = create_note(data)
@@ -43,11 +43,10 @@ class AppDelegate
    	end 
 
    	def get(sender)
+   		p @conffile
    		puts textField.stringValue
    		puts combo_box.stringValue
-   		authToken = login(@conffile)
-		noteStore = create_noteStore(authToken)
-		puts get_notebook_guid(combo_box.stringValue, authToken, noteStore)
+   		puts tagField.stringValue
    	end
 
    	# 画面の更新 

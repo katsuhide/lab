@@ -12,12 +12,13 @@
 require 'rubygems'
 require "digest/md5"
 require 'evernote-thrift'
+require 'yaml'
 
 # Real applications authenticate with Evernote using OAuth, but for the
 # purpose of exploring the API, you can get a developer token that allows
 # you to access your own Evernote account. To get a developer token, visit
 # https://sandbox.evernote.com/api/DeveloperToken.action
-authToken = "S=s1:U=52d8f:E=144f9fd7003:C=13da24c4404:P=1cd:A=en-devtoken:V=2:H=103adc60d84f44dccc1455d8b7ca165d"
+authToken = YAML.load_file("evernote.yaml").fetch('authToken')
 
 if authToken == "your developer token"
   puts "Please fill in your developer token"
