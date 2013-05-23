@@ -20,22 +20,25 @@ class AppDelegate
     attr_accessor :pathField
     attr_accessor :combo_box
 
+    @@attached_files = []
+
     def applicationDidFinishLaunching(a_notification)
         # Insert code here to initialize your application
-		@conffile = "/Users/AirMyac/github/lab/EverPost/EverPost/evernote.yaml"
+      @@attached_files.clear
+  		@conffile = "/Users/AirMyac/github/lab/EverPost/EverPost/evernote.yaml"
 	    refresh()
     end
    
    	def post_evernote(sender)
    		authToken = login(@conffile)
-		noteStore = create_noteStore(authToken)
+  		noteStore = create_noteStore(authToken)
    		data = Hash.new
    		data.store('title', textField.stringValue)
    		data.store('tag', tagField.stringValue.split(','))
-		data.store('notebook', get_notebook_guid(combo_box.stringValue, authToken, noteStore))
-   		data.store('path', pathField.stringValue)
-		note = create_note(data)
-		post(authToken, noteStore, note)
+  		data.store('notebook', get_notebook_guid(combo_box.stringValue, authToken, noteStore))
+   		data.store('path', @@attached_files)
+  		note = create_note(data)
+  		post(authToken, noteStore, note)
    	end 
    
    	def test(sender)
@@ -47,6 +50,7 @@ class AppDelegate
    		puts textField.stringValue
    		puts combo_box.stringValue
    		puts tagField.stringValue
+   		p @@attached_files
    	end
 
    	# 画面の更新 
@@ -60,5 +64,13 @@ class AppDelegate
 	    combo_box.selectItemAtIndex(0)
    	end
 
+   	def AppDelegate.set_attached_files(files)
+      @@attached_files = files
+   	end
+
+    def AppDelegate.clear_attached_files()
+      @@attached_files.clear
+    end
+    
 end
 

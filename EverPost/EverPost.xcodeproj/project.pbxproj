@@ -14,6 +14,7 @@
 		420813DD174A809C007FDC88 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 420813DB174A809C007FDC88 /* MainMenu.xib */; };
 		420813E0174A809C007FDC88 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 420813DF174A809C007FDC88 /* rb_main.rb */; };
 		420813E2174A809C007FDC88 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 420813E1174A809C007FDC88 /* AppDelegate.rb */; };
+		421E8164174E4D5E006BC75F /* DropView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 421E8163174E4D5E006BC75F /* DropView.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		420813DC174A809C007FDC88 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		420813DF174A809C007FDC88 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		420813E1174A809C007FDC88 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		421E8163174E4D5E006BC75F /* DropView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = DropView.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				420813DA174A809C007FDC88 /* Resources */,
 				420813DE174A809C007FDC88 /* Other Sources */,
 				420813D2174A809C007FDC88 /* Supporting Files */,
+				421E8163174E4D5E006BC75F /* DropView.rb */,
 			);
 			path = EverPost;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				420813DD174A809C007FDC88 /* MainMenu.xib in Resources */,
 				420813E0174A809C007FDC88 /* rb_main.rb in Resources */,
 				420813E2174A809C007FDC88 /* AppDelegate.rb in Resources */,
+				421E8164174E4D5E006BC75F /* DropView.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

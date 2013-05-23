@@ -9,7 +9,7 @@ def create_data()
 	data.store('title', "launch test")
 	data.store('tag', ["test"])
 	data.store('notebook', nil)
-	filename = "/Users/AirMyac/Desktop/fuga.txt"
+	filename = ["/Users/AirMyac/Desktop/fuga.txt", "/Users/AirMyac/Desktop/memo.pdf"]
 	data.store('path', filename)
 
 	return data
@@ -21,4 +21,4 @@ noteStore = create_noteStore(authToken)
 notebooks = get_notebook_list(authToken, noteStore)
 note = create_note(create_data())
 puts note
-# post(authToken, noteStore, note)
+post(authToken, noteStore, note)

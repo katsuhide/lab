@@ -74,33 +74,34 @@ def create_note(note_data)
 	note.notebookGuid = note_data.fetch('notebook')
 	note.tagNames = note_data.fetch('tag')
 
-	filename = note_data.fetch('path')
-	mime_type = MimeMagic.by_path(filename).to_s
-	base_name = File.basename(filename)
-	image = File.open(filename, "rb") { |io| io.read }
-	hashFunc = Digest::MD5.new
+	filenames = note_data.fetch('path')
+	note.resources = []
+	mime_types = []
+	hashHexs = []
+	filenames.each do |filename|
+		mime_type = MimeMagic.by_path(filename).to_s
+		base_name = File.basename(filename)
+		image = File.open(filename, "rb") { |io| io.read }
+		hashFunc = Digest::MD5.new
 
-	data = Evernote::EDAM::Type::Data.new
-	data.size = image.size
-	data.bodyHash = hashFunc.digest(image)
-	data.body = image
+		data = Evernote::EDAM::Type::Data.new
+		data.size = image.size
+		data.bodyHash = hashFunc.digest(image)
+		data.body = image
 
-	resource = Evernote::EDAM::Type::Resource.new
-	resource.mime = mime_type
-	resource.data = data
-	resource.attributes = Evernote::EDAM::Type::ResourceAttributes.new
-	resource.attributes.fileName = base_name 
-	note.resources = [ resource ]
-	hashHex = hashFunc.hexdigest(image)
+		resource = Evernote::EDAM::Type::Resource.new
+		resource.mime = mime_type
+		resource.data = data
+		resource.attributes = Evernote::EDAM::Type::ResourceAttributes.new
+		resource.attributes.fileName = base_name 
+		hashHex = hashFunc.hexdigest(image)
+		note.resources.push(resource)
 
-note.content = <<EOF
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
-<en-note>This is MacRuby's Test!!<br/>
-  <en-media type="#{mime_type}" hash="#{hashHex}"/>
-</en-note>
-EOF
+		mime_types.push(mime_type)
+		hashHexs.push(hashHex)
+	end
 
+	note.content  = create_content(filenames, mime_types, hashHexs)
 	return note
 end
 
@@ -110,3 +111,25 @@ def post(authToken, noteStore, note)
 	puts "Successfully created a new note with GUID: #{createdNote.guid}"
 end
 
+## Create ENML
+def create_content(filenames, mime_types, hashHexs)
+content = <<-EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>This is MacRuby's Test!!<br/>
+EOF
+
+i = 0
+while i < filenames.size
+content += <<-EOF
+<en-media type="#{mime_types[i]}" hash="#{hashHexs[i]}"/>
+EOF
+i += 1
+end
+
+content += <<-EOF
+</en-note>
+EOF
+
+	return content 
+end
