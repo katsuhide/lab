@@ -1429,7 +1429,7 @@
 							<string key="NSFrame">{{15, 207}, {420, 33}}</string>
 							<reference key="NSSuperview" ref="486160475"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="879018985"/>
+							<reference key="NSNextKeyView" ref="891173830"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSComboBoxCell" key="NSCell" id="94001382">
@@ -1528,6 +1528,33 @@
 							</object>
 							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 						</object>
+						<object class="NSTextField" id="75466114">
+							<reference key="NSNextResponder" ref="486160475"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{20, 19}, {396, 22}}</string>
+							<reference key="NSSuperview" ref="486160475"/>
+							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView" ref="781669417"/>
+							<string key="NSReuseIdentifierKey">_NS:9</string>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSTextFieldCell" key="NSCell" id="943952659">
+								<int key="NSCellFlags">-1804599231</int>
+								<int key="NSCellFlags2">272630784</int>
+								<string key="NSContents">/Users/AirMyac/github/lab/EverPost/EverPost/evernote.yaml</string>
+								<reference key="NSSupport" ref="213920214"/>
+								<string key="NSCellIdentifier">_NS:9</string>
+								<reference key="NSControlView" ref="75466114"/>
+								<bool key="NSDrawsBackground">YES</bool>
+								<reference key="NSBackgroundColor" ref="591504644"/>
+								<object class="NSColor" key="NSTextColor" id="135209724">
+									<int key="NSColorSpace">6</int>
+									<string key="NSCatalogName">System</string>
+									<string key="NSColorName">controlColor</string>
+									<reference key="NSColor" ref="123493196"/>
+								</object>
+							</object>
+							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
+						</object>
 						<object class="NSButton" id="781669417">
 							<reference key="NSNextResponder" ref="486160475"/>
 							<int key="NSvFlags">268</int>
@@ -1589,11 +1616,11 @@
 							<string key="NSFrame">{{15, 60}, {400, 135}}</string>
 							<reference key="NSSuperview" ref="486160475"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="781669417"/>
+							<reference key="NSNextKeyView" ref="75466114"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<string key="NSClassName">DropView</string>
 						</object>
-						<object class="NSTextField" id="879018985">
+						<object class="NSTextField" id="891173830">
 							<reference key="NSNextResponder" ref="486160475"/>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{0, 117}, {440, 20}}</string>
@@ -1602,19 +1629,14 @@
 							<reference key="NSNextKeyView" ref="358821607"/>
 							<string key="NSReuseIdentifierKey">_NS:1535</string>
 							<bool key="NSEnabled">YES</bool>
-							<object class="NSTextFieldCell" key="NSCell" id="839115420">
+							<object class="NSTextFieldCell" key="NSCell" id="71033319">
 								<int key="NSCellFlags">68157504</int>
 								<int key="NSCellFlags2">138413056</int>
 								<string key="NSContents">File</string>
 								<reference key="NSSupport" ref="213920214"/>
 								<string key="NSCellIdentifier">_NS:1535</string>
-								<reference key="NSControlView" ref="879018985"/>
-								<object class="NSColor" key="NSBackgroundColor" id="135209724">
-									<int key="NSColorSpace">6</int>
-									<string key="NSCatalogName">System</string>
-									<string key="NSColorName">controlColor</string>
-									<reference key="NSColor" ref="123493196"/>
-								</object>
+								<reference key="NSControlView" ref="891173830"/>
+								<reference key="NSBackgroundColor" ref="135209724"/>
 								<object class="NSColor" key="NSTextColor">
 									<int key="NSColorSpace">6</int>
 									<string key="NSCatalogName">System</string>
@@ -2371,6 +2393,22 @@
 						<reference key="destination" ref="1026993596"/>
 					</object>
 					<int key="connectionID">602</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">pathField</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="75466114"/>
+					</object>
+					<int key="connectionID">616</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">path_field</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="75466114"/>
+					</object>
+					<int key="connectionID">617</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3421,7 +3459,8 @@
 							<reference ref="358821607"/>
 							<reference ref="781669417"/>
 							<reference ref="921026382"/>
-							<reference ref="879018985"/>
+							<reference ref="891173830"/>
+							<reference ref="75466114"/>
 						</object>
 						<reference key="parent" ref="11785297"/>
 					</object>
@@ -3516,17 +3555,31 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">612</int>
-						<reference key="object" ref="879018985"/>
+						<reference key="object" ref="891173830"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="839115420"/>
+							<reference ref="71033319"/>
 						</object>
 						<reference key="parent" ref="486160475"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">613</int>
-						<reference key="object" ref="839115420"/>
-						<reference key="parent" ref="879018985"/>
+						<reference key="object" ref="71033319"/>
+						<reference key="parent" ref="891173830"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">614</int>
+						<reference key="object" ref="75466114"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="943952659"/>
+						</object>
+						<reference key="parent" ref="486160475"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">615</int>
+						<reference key="object" ref="943952659"/>
+						<reference key="parent" ref="75466114"/>
 					</object>
 				</object>
 			</object>
@@ -3691,6 +3744,8 @@
 					<string>603.IBPluginDependency</string>
 					<string>612.IBPluginDependency</string>
 					<string>613.IBPluginDependency</string>
+					<string>614.IBPluginDependency</string>
+					<string>615.IBPluginDependency</string>
 					<string>72.IBPluginDependency</string>
 					<string>73.IBPluginDependency</string>
 					<string>74.IBPluginDependency</string>
@@ -3878,6 +3933,8 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -3892,7 +3949,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">613</int>
+			<int key="maxID">617</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3945,12 +4002,14 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>combo_box</string>
 							<string>pathField</string>
+							<string>path_field</string>
 							<string>tagField</string>
 							<string>textField</string>
 							<string>window</string>
 						</object>
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -3964,6 +4023,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>combo_box</string>
 							<string>pathField</string>
+							<string>path_field</string>
 							<string>tagField</string>
 							<string>textField</string>
 							<string>window</string>
@@ -3976,6 +4036,10 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">pathField</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">path_field</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBToOneOutletInfo">

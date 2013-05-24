@@ -7,10 +7,6 @@
 #
 # encoding: utf-8
 require 'rubygems'
-path = "/Users/AirMyac/github/lab/EverPost/EverPost"
-$LOAD_PATH.push(Dir::pwd)	 
-$LOAD_PATH.push(path) 
-
 require "add_note"
 
 class AppDelegate
@@ -19,13 +15,14 @@ class AppDelegate
     attr_accessor :tagField
     attr_accessor :pathField
     attr_accessor :combo_box
+    attr_accessor :path_field
 
     @@attached_files = []
 
     def applicationDidFinishLaunching(a_notification)
         # Insert code here to initialize your application
       @@attached_files.clear
-  		@conffile = "/Users/AirMyac/github/lab/EverPost/EverPost/evernote.yaml"
+  		@conffile = path_field.stringValue
 	    refresh()
     end
    
@@ -71,6 +68,6 @@ class AppDelegate
     def AppDelegate.clear_attached_files()
       @@attached_files.clear
     end
-    
+
 end
 

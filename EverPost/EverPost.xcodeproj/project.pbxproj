@@ -124,7 +124,7 @@
 /* Begin PBXLegacyTarget section */
 		420813CE174A809C007FDC88 /* Deployment */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "--compile --embed --gem evernote_oauth  --gem oauth --gem evernote-thrift";
+			buildArgumentsString = "--compile --embed --gem evernote_oauth  --gem oauth --gem evernote-thrift --gem mimemagic";
 			buildConfigurationList = 420813E8174A809C007FDC88 /* Build configuration list for PBXLegacyTarget "Deployment" */;
 			buildPhases = (
 			);
