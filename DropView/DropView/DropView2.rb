@@ -6,7 +6,7 @@
 #  Copyright 2013 com.katzlifehack. All rights reserved.
 #
 
-class DropView2 < NSView
+class DropView2 < NSBox
 
     def initWithFrame(rect)
         if super

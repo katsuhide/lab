@@ -9,11 +9,12 @@
 
 require 'AppDelegate'
 
-class DropView < NSView
+class DropView < NSBox
 
     def initWithFrame(rect)
         if super
             self.registerForDraggedTypes([NSColorPboardType, NSFilenamesPboardType])
+            self.setTitle("")
             return self
         end
     end
