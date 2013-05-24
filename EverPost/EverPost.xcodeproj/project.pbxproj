@@ -15,6 +15,7 @@
 		420813E0174A809C007FDC88 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 420813DF174A809C007FDC88 /* rb_main.rb */; };
 		420813E2174A809C007FDC88 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 420813E1174A809C007FDC88 /* AppDelegate.rb */; };
 		421E8164174E4D5E006BC75F /* DropView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 421E8163174E4D5E006BC75F /* DropView.rb */; };
+		42B18EE7174FE18400AA78FF /* evernote.rb in Resources */ = {isa = PBXBuildFile; fileRef = 42B18EE6174FE18400AA78FF /* evernote.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		420813DF174A809C007FDC88 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		420813E1174A809C007FDC88 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
 		421E8163174E4D5E006BC75F /* DropView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = DropView.rb; sourceTree = "<group>"; };
+		42B18EE6174FE18400AA78FF /* evernote.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = evernote.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				420813DE174A809C007FDC88 /* Other Sources */,
 				420813D2174A809C007FDC88 /* Supporting Files */,
 				421E8163174E4D5E006BC75F /* DropView.rb */,
+				42B18EE6174FE18400AA78FF /* evernote.rb */,
 			);
 			path = EverPost;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				420813E0174A809C007FDC88 /* rb_main.rb in Resources */,
 				420813E2174A809C007FDC88 /* AppDelegate.rb in Resources */,
 				421E8164174E4D5E006BC75F /* DropView.rb in Resources */,
+				42B18EE7174FE18400AA78FF /* evernote.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

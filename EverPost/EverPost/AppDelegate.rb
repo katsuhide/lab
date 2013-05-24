@@ -7,7 +7,7 @@
 #
 # encoding: utf-8
 require 'rubygems'
-require "add_note"
+require 'evernote'
 
 class AppDelegate
     attr_accessor :window
@@ -22,7 +22,7 @@ class AppDelegate
     def applicationDidFinishLaunching(a_notification)
         # Insert code here to initialize your application
       @@attached_files.clear
-  		@conffile = path_field.stringValue
+      @conffile = path_field.stringvalue
 	    refresh()
     end
    
@@ -36,10 +36,6 @@ class AppDelegate
    		data.store('path', @@attached_files)
   		note = create_note(data)
   		post(authToken, noteStore, note)
-   	end 
-   
-   	def test(sender)
-   		textField.setStringValue("1234")
    	end 
 
    	def get(sender)

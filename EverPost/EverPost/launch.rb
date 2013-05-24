@@ -19,6 +19,7 @@ conffile = "evernote.yaml"
 authToken = login(conffile)
 noteStore = create_noteStore(authToken)
 notebooks = get_notebook_list(authToken, noteStore)
-note = create_note(create_data())
-puts note
-post(authToken, noteStore, note)
+puts notebooks
+# note = create_note(create_data())
+# puts note
+# post(authToken, noteStore, note)
