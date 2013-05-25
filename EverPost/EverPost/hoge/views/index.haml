@@ -1,0 +1,13 @@
+@@ layout
+!!!
+%html(lang="ja")
+  %head
+    %meta(charset="UTF-8")
+    %title #{@page_title}
+  %body
+    = yield
+
+@@ index
+- @page_title = "Authorize my app"
+%p
+  %a(href=@authorize_url)<Click to authorize my app

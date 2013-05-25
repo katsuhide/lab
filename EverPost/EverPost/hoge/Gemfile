@@ -1,0 +1,5 @@
+source :rubygems
+ 
+gem 'rack'
+gem 'sinatra', '~> 1.0.0'
+gem 'control_tower'

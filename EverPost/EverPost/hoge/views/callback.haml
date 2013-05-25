@@ -1,0 +1,15 @@
+@@ layout
+!!!
+%html(lang="ja")
+  %head
+    %meta(charset="UTF-8")
+    %title #{@page_title}
+  %body
+    = yield
+
+@@ callback
+- @page_title = "Your token for Evernote access"
+%p
+  Your token is:
+  %form
+    %input(type="text" value=@token size=40)
