@@ -1613,7 +1613,7 @@
 						<object class="NSCustomView" id="358821607">
 							<reference key="NSNextResponder" ref="486160475"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{15, 60}, {400, 135}}</string>
+							<string key="NSFrame">{{15, 60}, {405, 130}}</string>
 							<reference key="NSSuperview" ref="486160475"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="75466114"/>
@@ -1659,24 +1659,6 @@
 				<string key="NSScreenRect">{{0, 0}, {1366, 746}}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
-			</object>
-			<object class="NSTextField" id="27887097">
-				<nil key="NSNextResponder"/>
-				<int key="NSvFlags">268</int>
-				<string key="NSFrameSize">{237, 77}</string>
-				<string key="NSReuseIdentifierKey">_NS:1535</string>
-				<bool key="NSEnabled">YES</bool>
-				<object class="NSTextFieldCell" key="NSCell" id="453312070">
-					<int key="NSCellFlags">68157504</int>
-					<int key="NSCellFlags2">272630784</int>
-					<string key="NSContents">Label</string>
-					<reference key="NSSupport" ref="213920214"/>
-					<string key="NSCellIdentifier">_NS:1535</string>
-					<reference key="NSControlView" ref="27887097"/>
-					<reference key="NSBackgroundColor" ref="135209724"/>
-					<reference key="NSTextColor" ref="366190554"/>
-				</object>
-				<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -3465,20 +3447,6 @@
 						<reference key="parent" ref="11785297"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">539</int>
-						<reference key="object" ref="27887097"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="453312070"/>
-						</object>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">540</int>
-						<reference key="object" ref="453312070"/>
-						<reference key="parent" ref="27887097"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">549</int>
 						<reference key="object" ref="233035457"/>
 						<object class="NSMutableArray" key="children">
@@ -3725,8 +3693,6 @@
 					<string>535.IBPluginDependency</string>
 					<string>535.NSWindowTemplate.visibleAtLaunch</string>
 					<string>536.IBPluginDependency</string>
-					<string>539.IBPluginDependency</string>
-					<string>540.IBPluginDependency</string>
 					<string>549.IBPluginDependency</string>
 					<string>550.IBPluginDependency</string>
 					<string>559.IBPluginDependency</string>
@@ -3898,8 +3864,6 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>

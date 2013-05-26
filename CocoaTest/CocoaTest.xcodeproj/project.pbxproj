@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4246FBE91751D6D900F52B1C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4246FBE81751D6D900F52B1C /* Cocoa.framework */; };
+		4246FBF31751D6D900F52B1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4246FBF11751D6D900F52B1C /* InfoPlist.strings */; };
+		4246FBF51751D6D900F52B1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4246FBF41751D6D900F52B1C /* main.m */; };
+		4246FBF91751D6D900F52B1C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4246FBF71751D6D900F52B1C /* Credits.rtf */; };
+		4246FBFC1751D6D900F52B1C /* IEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4246FBFB1751D6D900F52B1C /* IEAppDelegate.m */; };
+		4246FBFF1751D6D900F52B1C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4246FBFD1751D6D900F52B1C /* MainMenu.xib */; };
+		4246FC0A1751FA9300F52B1C /* DropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4246FC091751FA9300F52B1C /* DropView.m */; };
+		4246FC201752012400F52B1C /* EvernoteSDK-Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4246FC171752010C00F52B1C /* EvernoteSDK-Mac.framework */; };
+		4246FC221752013700F52B1C /* EvernoteSDK-Mac.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4246FC171752010C00F52B1C /* EvernoteSDK-Mac.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4246FC141752010C00F52B1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4246FC0C1752010B00F52B1C /* EvernoteSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0BB3D1AD1524ED96001C4534;
+			remoteInfo = EvernoteSDK;
+		};
+		4246FC161752010C00F52B1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4246FC0C1752010B00F52B1C /* EvernoteSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 43741864170ADB2400D2BE51;
+			remoteInfo = "EvernoteSDK-Mac";
+		};
+		4246FC181752010C00F52B1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4246FC0C1752010B00F52B1C /* EvernoteSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0BB3D26E1524EF37001C4534;
+			remoteInfo = "SampleApp-iOS";
+		};
+		4246FC1A1752010C00F52B1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4246FC0C1752010B00F52B1C /* EvernoteSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 437418AC170ADCD600D2BE51;
+			remoteInfo = "SampleApp-Mac";
+		};
+		4246FC1C1752010C00F52B1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4246FC0C1752010B00F52B1C /* EvernoteSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0BDBBC431550A11A003E6681;
+			remoteInfo = UnitTests;
+		};
+		4246FC1E1752011C00F52B1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4246FC0C1752010B00F52B1C /* EvernoteSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 43741863170ADB2400D2BE51;
+			remoteInfo = "EvernoteSDK-Mac";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4246FC211752012900F52B1C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4246FC221752013700F52B1C /* EvernoteSDK-Mac.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4246FBE51751D6D900F52B1C /* CocoaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4246FBE81751D6D900F52B1C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4246FBEB1751D6D900F52B1C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4246FBEC1751D6D900F52B1C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4246FBED1751D6D900F52B1C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4246FBF01751D6D900F52B1C /* CocoaTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaTest-Info.plist"; sourceTree = "<group>"; };
+		4246FBF21751D6D900F52B1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4246FBF41751D6D900F52B1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4246FBF61751D6D900F52B1C /* CocoaTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CocoaTest-Prefix.pch"; sourceTree = "<group>"; };
+		4246FBF81751D6D900F52B1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		4246FBFA1751D6D900F52B1C /* IEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IEAppDelegate.h; sourceTree = "<group>"; };
+		4246FBFB1751D6D900F52B1C /* IEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IEAppDelegate.m; sourceTree = "<group>"; };
+		4246FBFE1751D6D900F52B1C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4246FC081751FA9300F52B1C /* DropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropView.h; sourceTree = "<group>"; };
+		4246FC091751FA9300F52B1C /* DropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropView.m; sourceTree = "<group>"; };
+		4246FC0C1752010B00F52B1C /* EvernoteSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EvernoteSDK.xcodeproj; path = "../../evernote-sdk-mac-master/EvernoteSDK.xcodeproj"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4246FBE21751D6D900F52B1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4246FC201752012400F52B1C /* EvernoteSDK-Mac.framework in Frameworks */,
+				4246FBE91751D6D900F52B1C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4246FBDC1751D6D900F52B1C = {
+			isa = PBXGroup;
+			children = (
+				4246FBEE1751D6D900F52B1C /* CocoaTest */,
+				4246FBE71751D6D900F52B1C /* Frameworks */,
+				4246FBE61751D6D900F52B1C /* Products */,
+				4246FC0C1752010B00F52B1C /* EvernoteSDK.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		4246FBE61751D6D900F52B1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4246FBE51751D6D900F52B1C /* CocoaTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4246FBE71751D6D900F52B1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4246FBE81751D6D900F52B1C /* Cocoa.framework */,
+				4246FBEA1751D6D900F52B1C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4246FBEA1751D6D900F52B1C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4246FBEB1751D6D900F52B1C /* AppKit.framework */,
+				4246FBEC1751D6D900F52B1C /* CoreData.framework */,
+				4246FBED1751D6D900F52B1C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4246FBEE1751D6D900F52B1C /* CocoaTest */ = {
+			isa = PBXGroup;
+			children = (
+				4246FBFA1751D6D900F52B1C /* IEAppDelegate.h */,
+				4246FBFB1751D6D900F52B1C /* IEAppDelegate.m */,
+				4246FBFD1751D6D900F52B1C /* MainMenu.xib */,
+				4246FBEF1751D6D900F52B1C /* Supporting Files */,
+				4246FC081751FA9300F52B1C /* DropView.h */,
+				4246FC091751FA9300F52B1C /* DropView.m */,
+			);
+			path = CocoaTest;
+			sourceTree = "<group>";
+		};
+		4246FBEF1751D6D900F52B1C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4246FBF01751D6D900F52B1C /* CocoaTest-Info.plist */,
+				4246FBF11751D6D900F52B1C /* InfoPlist.strings */,
+				4246FBF41751D6D900F52B1C /* main.m */,
+				4246FBF61751D6D900F52B1C /* CocoaTest-Prefix.pch */,
+				4246FBF71751D6D900F52B1C /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4246FC0D1752010B00F52B1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4246FC151752010C00F52B1C /* libEvernoteSDK.a */,
+				4246FC171752010C00F52B1C /* EvernoteSDK-Mac.framework */,
+				4246FC191752010C00F52B1C /* SampleApp-iOS.app */,
+				4246FC1B1752010C00F52B1C /* SampleApp-Mac.app */,
+				4246FC1D1752010C00F52B1C /* UnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4246FBE41751D6D900F52B1C /* CocoaTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4246FC021751D6D900F52B1C /* Build configuration list for PBXNativeTarget "CocoaTest" */;
+			buildPhases = (
+				4246FBE11751D6D900F52B1C /* Sources */,
+				4246FBE21751D6D900F52B1C /* Frameworks */,
+				4246FBE31751D6D900F52B1C /* Resources */,
+				4246FC211752012900F52B1C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4246FC1F1752011C00F52B1C /* PBXTargetDependency */,
+			);
+			name = CocoaTest;
+			productName = CocoaTest;
+			productReference = 4246FBE51751D6D900F52B1C /* CocoaTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4246FBDD1751D6D900F52B1C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IE;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = com.katzlifehack;
+			};
+			buildConfigurationList = 4246FBE01751D6D900F52B1C /* Build configuration list for PBXProject "CocoaTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4246FBDC1751D6D900F52B1C;
+			productRefGroup = 4246FBE61751D6D900F52B1C /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4246FC0D1752010B00F52B1C /* Products */;
+					ProjectRef = 4246FC0C1752010B00F52B1C /* EvernoteSDK.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				4246FBE41751D6D900F52B1C /* CocoaTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4246FC151752010C00F52B1C /* libEvernoteSDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libEvernoteSDK.a;
+			remoteRef = 4246FC141752010C00F52B1C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4246FC171752010C00F52B1C /* EvernoteSDK-Mac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = "EvernoteSDK-Mac.framework";
+			remoteRef = 4246FC161752010C00F52B1C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4246FC191752010C00F52B1C /* SampleApp-iOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "SampleApp-iOS.app";
+			remoteRef = 4246FC181752010C00F52B1C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4246FC1B1752010C00F52B1C /* SampleApp-Mac.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "SampleApp-Mac.app";
+			remoteRef = 4246FC1A1752010C00F52B1C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4246FC1D1752010C00F52B1C /* UnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.octest;
+			remoteRef = 4246FC1C1752010C00F52B1C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4246FBE31751D6D900F52B1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4246FBF31751D6D900F52B1C /* InfoPlist.strings in Resources */,
+				4246FBF91751D6D900F52B1C /* Credits.rtf in Resources */,
+				4246FBFF1751D6D900F52B1C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4246FBE11751D6D900F52B1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4246FBF51751D6D900F52B1C /* main.m in Sources */,
+				4246FBFC1751D6D900F52B1C /* IEAppDelegate.m in Sources */,
+				4246FC0A1751FA9300F52B1C /* DropView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4246FC1F1752011C00F52B1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "EvernoteSDK-Mac";
+			targetProxy = 4246FC1E1752011C00F52B1C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4246FBF11751D6D900F52B1C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4246FBF21751D6D900F52B1C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4246FBF71751D6D900F52B1C /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4246FBF81751D6D900F52B1C /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		4246FBFD1751D6D900F52B1C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4246FBFE1751D6D900F52B1C /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4246FC001751D6D900F52B1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4246FC011751D6D900F52B1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4246FC031751D6D900F52B1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocoaTest/CocoaTest-Prefix.pch";
+				INFOPLIST_FILE = "CocoaTest/CocoaTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4246FC041751D6D900F52B1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocoaTest/CocoaTest-Prefix.pch";
+				INFOPLIST_FILE = "CocoaTest/CocoaTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4246FBE01751D6D900F52B1C /* Build configuration list for PBXProject "CocoaTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4246FC001751D6D900F52B1C /* Debug */,
+				4246FC011751D6D900F52B1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4246FC021751D6D900F52B1C /* Build configuration list for PBXNativeTarget "CocoaTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4246FC031751D6D900F52B1C /* Debug */,
+				4246FC041751D6D900F52B1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4246FBDD1751D6D900F52B1C /* Project object */;
+}

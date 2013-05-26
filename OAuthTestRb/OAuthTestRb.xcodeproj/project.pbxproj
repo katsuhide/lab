@@ -1,0 +1,384 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4246FBD71751D09400F52B1C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4246FBD61751D09400F52B1C /* WebKit.framework */; };
+		4246FBDB1751D5CE00F52B1C /* EvernoteOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 4246FBDA1751D5CE00F52B1C /* EvernoteOAuth.m */; };
+		425B346E1751CCEB00791A3D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425B346D1751CCEB00791A3D /* Cocoa.framework */; };
+		425B34701751CCEB00791A3D /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425B346F1751CCEB00791A3D /* MacRuby.framework */; };
+		425B34791751CCEB00791A3D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 425B34771751CCEB00791A3D /* InfoPlist.strings */; };
+		425B347B1751CCEB00791A3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 425B347A1751CCEB00791A3D /* main.m */; };
+		425B34801751CCEB00791A3D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425B347E1751CCEB00791A3D /* MainMenu.xib */; };
+		425B34831751CCEB00791A3D /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 425B34821751CCEB00791A3D /* rb_main.rb */; };
+		425B34851751CCEB00791A3D /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 425B34841751CCEB00791A3D /* AppDelegate.rb */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		425B34721751CCEB00791A3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 425B34621751CCEB00791A3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 425B34691751CCEB00791A3D;
+			remoteInfo = OAuthTestRb;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4246FBD61751D09400F52B1C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		4246FBD91751D5CE00F52B1C /* EvernoteOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvernoteOAuth.h; sourceTree = "<group>"; };
+		4246FBDA1751D5CE00F52B1C /* EvernoteOAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvernoteOAuth.m; sourceTree = "<group>"; };
+		425B346A1751CCEB00791A3D /* OAuthTestRb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OAuthTestRb.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		425B346D1751CCEB00791A3D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		425B346F1751CCEB00791A3D /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
+		425B34761751CCEB00791A3D /* OAuthTestRb-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OAuthTestRb-Info.plist"; sourceTree = "<group>"; };
+		425B34781751CCEB00791A3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		425B347A1751CCEB00791A3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		425B347C1751CCEB00791A3D /* OAuthTestRb-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OAuthTestRb-Prefix.pch"; sourceTree = "<group>"; };
+		425B347F1751CCEB00791A3D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		425B34821751CCEB00791A3D /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		425B34841751CCEB00791A3D /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		425B34671751CCEB00791A3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4246FBD71751D09400F52B1C /* WebKit.framework in Frameworks */,
+				425B346E1751CCEB00791A3D /* Cocoa.framework in Frameworks */,
+				425B34701751CCEB00791A3D /* MacRuby.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		425B34611751CCEB00791A3D = {
+			isa = PBXGroup;
+			children = (
+				4246FBD61751D09400F52B1C /* WebKit.framework */,
+				425B34741751CCEB00791A3D /* OAuthTestRb */,
+				425B346C1751CCEB00791A3D /* Frameworks */,
+				425B346B1751CCEB00791A3D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		425B346B1751CCEB00791A3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				425B346A1751CCEB00791A3D /* OAuthTestRb.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		425B346C1751CCEB00791A3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				425B346D1751CCEB00791A3D /* Cocoa.framework */,
+				425B346F1751CCEB00791A3D /* MacRuby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		425B34741751CCEB00791A3D /* OAuthTestRb */ = {
+			isa = PBXGroup;
+			children = (
+				425B34841751CCEB00791A3D /* AppDelegate.rb */,
+				425B347D1751CCEB00791A3D /* Resources */,
+				425B34811751CCEB00791A3D /* Other Sources */,
+				425B34751751CCEB00791A3D /* Supporting Files */,
+				4246FBD91751D5CE00F52B1C /* EvernoteOAuth.h */,
+				4246FBDA1751D5CE00F52B1C /* EvernoteOAuth.m */,
+			);
+			path = OAuthTestRb;
+			sourceTree = "<group>";
+		};
+		425B34751751CCEB00791A3D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				425B34761751CCEB00791A3D /* OAuthTestRb-Info.plist */,
+				425B34771751CCEB00791A3D /* InfoPlist.strings */,
+				425B347A1751CCEB00791A3D /* main.m */,
+				425B347C1751CCEB00791A3D /* OAuthTestRb-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		425B347D1751CCEB00791A3D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				425B347E1751CCEB00791A3D /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		425B34811751CCEB00791A3D /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				425B34821751CCEB00791A3D /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		425B34711751CCEB00791A3D /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed";
+			buildConfigurationList = 425B348B1751CCEB00791A3D /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			dependencies = (
+				425B34731751CCEB00791A3D /* PBXTargetDependency */,
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		425B34691751CCEB00791A3D /* OAuthTestRb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 425B34881751CCEB00791A3D /* Build configuration list for PBXNativeTarget "OAuthTestRb" */;
+			buildPhases = (
+				425B34661751CCEB00791A3D /* Sources */,
+				425B34671751CCEB00791A3D /* Frameworks */,
+				425B34681751CCEB00791A3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OAuthTestRb;
+			productName = OAuthTestRb;
+			productReference = 425B346A1751CCEB00791A3D /* OAuthTestRb.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		425B34621751CCEB00791A3D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = com.katzlifehack;
+			};
+			buildConfigurationList = 425B34651751CCEB00791A3D /* Build configuration list for PBXProject "OAuthTestRb" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 425B34611751CCEB00791A3D;
+			productRefGroup = 425B346B1751CCEB00791A3D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				425B34691751CCEB00791A3D /* OAuthTestRb */,
+				425B34711751CCEB00791A3D /* Deployment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		425B34681751CCEB00791A3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				425B34791751CCEB00791A3D /* InfoPlist.strings in Resources */,
+				425B34801751CCEB00791A3D /* MainMenu.xib in Resources */,
+				425B34831751CCEB00791A3D /* rb_main.rb in Resources */,
+				425B34851751CCEB00791A3D /* AppDelegate.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		425B34661751CCEB00791A3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				425B347B1751CCEB00791A3D /* main.m in Sources */,
+				4246FBDB1751D5CE00F52B1C /* EvernoteOAuth.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		425B34731751CCEB00791A3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 425B34691751CCEB00791A3D /* OAuthTestRb */;
+			targetProxy = 425B34721751CCEB00791A3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		425B34771751CCEB00791A3D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				425B34781751CCEB00791A3D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		425B347E1751CCEB00791A3D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				425B347F1751CCEB00791A3D /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		425B34861751CCEB00791A3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		425B34871751CCEB00791A3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		425B34891751CCEB00791A3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					/Library/Frameworks,
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OAuthTestRb/OAuthTestRb-Prefix.pch";
+				INFOPLIST_FILE = "OAuthTestRb/OAuthTestRb-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		425B348A1751CCEB00791A3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					/Library/Frameworks,
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OAuthTestRb/OAuthTestRb-Prefix.pch";
+				INFOPLIST_FILE = "OAuthTestRb/OAuthTestRb-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		425B348C1751CCEB00791A3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		425B348D1751CCEB00791A3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		425B34651751CCEB00791A3D /* Build configuration list for PBXProject "OAuthTestRb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				425B34861751CCEB00791A3D /* Debug */,
+				425B34871751CCEB00791A3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		425B34881751CCEB00791A3D /* Build configuration list for PBXNativeTarget "OAuthTestRb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				425B34891751CCEB00791A3D /* Debug */,
+				425B348A1751CCEB00791A3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		425B348B1751CCEB00791A3D /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				425B348C1751CCEB00791A3D /* Debug */,
+				425B348D1751CCEB00791A3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 425B34621751CCEB00791A3D /* Project object */;
+}

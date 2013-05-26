@@ -3,7 +3,6 @@ gem 'sinatra', '=1.0'
 require 'sinatra/base'
 require 'sinatra'
 require 'evernote_oauth'
-require 'haml'
 
 use Rack::Session::Cookie,
   :key => "rack.session",
@@ -26,7 +25,6 @@ class MyApp < Sinatra::Base
     @authorize_url = request_token.authorize_url
     'Hello world!'
     "Authorize my app"
-    "a href=@authorize_url < Click to authorize my app"
 
   end
 

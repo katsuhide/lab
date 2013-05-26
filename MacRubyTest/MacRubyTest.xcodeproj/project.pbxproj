@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		422BA1E517513462009EC2B6 /* OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 422BA1E417513462009EC2B6 /* OAuth.m */; };
+		422BA221175137DE009EC2B6 /* EvernoteSDK-Mac.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 422BA215175136DB009EC2B6 /* EvernoteSDK-Mac.framework */; };
 		42D3A1C81749E3F2000E7E96 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D3A1C71749E3F2000E7E96 /* Cocoa.framework */; };
 		42D3A1CA1749E3F2000E7E96 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D3A1C91749E3F2000E7E96 /* MacRuby.framework */; };
 		42D3A1D31749E3F2000E7E96 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42D3A1D11749E3F2000E7E96 /* InfoPlist.strings */; };
@@ -17,6 +19,48 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		422BA212175136DB009EC2B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 422BA20A175136DB009EC2B6 /* EvernoteSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0BB3D1AD1524ED96001C4534;
+			remoteInfo = EvernoteSDK;
+		};
+		422BA214175136DB009EC2B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 422BA20A175136DB009EC2B6 /* EvernoteSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 43741864170ADB2400D2BE51;
+			remoteInfo = "EvernoteSDK-Mac";
+		};
+		422BA216175136DB009EC2B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 422BA20A175136DB009EC2B6 /* EvernoteSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0BB3D26E1524EF37001C4534;
+			remoteInfo = "SampleApp-iOS";
+		};
+		422BA218175136DB009EC2B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 422BA20A175136DB009EC2B6 /* EvernoteSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 437418AC170ADCD600D2BE51;
+			remoteInfo = "SampleApp-Mac";
+		};
+		422BA21A175136DB009EC2B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 422BA20A175136DB009EC2B6 /* EvernoteSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0BDBBC431550A11A003E6681;
+			remoteInfo = UnitTests;
+		};
+		422BA21D175137B6009EC2B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 422BA20A175136DB009EC2B6 /* EvernoteSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 43741863170ADB2400D2BE51;
+			remoteInfo = "EvernoteSDK-Mac";
+		};
 		42D3A1CC1749E3F2000E7E96 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 42D3A1BC1749E3F2000E7E96 /* Project object */;
@@ -26,7 +70,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		422BA220175137D1009EC2B6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				422BA221175137DE009EC2B6 /* EvernoteSDK-Mac.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		422BA1E317513462009EC2B6 /* OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth.h; sourceTree = "<group>"; };
+		422BA1E417513462009EC2B6 /* OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuth.m; sourceTree = "<group>"; };
+		422BA20A175136DB009EC2B6 /* EvernoteSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EvernoteSDK.xcodeproj; path = "../../evernote-sdk-mac-master/EvernoteSDK.xcodeproj"; sourceTree = "<group>"; };
 		42D3A1C41749E3F2000E7E96 /* MacRubyTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacRubyTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42D3A1C71749E3F2000E7E96 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		42D3A1C91749E3F2000E7E96 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
@@ -52,9 +112,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		422BA20B175136DB009EC2B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				422BA213175136DB009EC2B6 /* libEvernoteSDK.a */,
+				422BA215175136DB009EC2B6 /* EvernoteSDK-Mac.framework */,
+				422BA217175136DB009EC2B6 /* SampleApp-iOS.app */,
+				422BA219175136DB009EC2B6 /* SampleApp-Mac.app */,
+				422BA21B175136DB009EC2B6 /* UnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		42D3A1BB1749E3F2000E7E96 = {
 			isa = PBXGroup;
 			children = (
+				422BA20A175136DB009EC2B6 /* EvernoteSDK.xcodeproj */,
 				42D3A1CE1749E3F2000E7E96 /* MacRubyTest */,
 				42D3A1C61749E3F2000E7E96 /* Frameworks */,
 				42D3A1C51749E3F2000E7E96 /* Products */,
@@ -85,6 +158,8 @@
 				42D3A1D71749E3F2000E7E96 /* Resources */,
 				42D3A1DB1749E3F2000E7E96 /* Other Sources */,
 				42D3A1CF1749E3F2000E7E96 /* Supporting Files */,
+				422BA1E317513462009EC2B6 /* OAuth.h */,
+				422BA1E417513462009EC2B6 /* OAuth.m */,
 			);
 			path = MacRubyTest;
 			sourceTree = "<group>";
@@ -143,10 +218,12 @@
 				42D3A1C01749E3F2000E7E96 /* Sources */,
 				42D3A1C11749E3F2000E7E96 /* Frameworks */,
 				42D3A1C21749E3F2000E7E96 /* Resources */,
+				422BA220175137D1009EC2B6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				422BA21E175137B6009EC2B6 /* PBXTargetDependency */,
 			);
 			name = MacRubyTest;
 			productName = MacRubyTest;
@@ -172,6 +249,12 @@
 			mainGroup = 42D3A1BB1749E3F2000E7E96;
 			productRefGroup = 42D3A1C51749E3F2000E7E96 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 422BA20B175136DB009EC2B6 /* Products */;
+					ProjectRef = 422BA20A175136DB009EC2B6 /* EvernoteSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				42D3A1C31749E3F2000E7E96 /* MacRubyTest */,
@@ -179,6 +262,44 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		422BA213175136DB009EC2B6 /* libEvernoteSDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libEvernoteSDK.a;
+			remoteRef = 422BA212175136DB009EC2B6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		422BA215175136DB009EC2B6 /* EvernoteSDK-Mac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = "EvernoteSDK-Mac.framework";
+			remoteRef = 422BA214175136DB009EC2B6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		422BA217175136DB009EC2B6 /* SampleApp-iOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "SampleApp-iOS.app";
+			remoteRef = 422BA216175136DB009EC2B6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		422BA219175136DB009EC2B6 /* SampleApp-Mac.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "SampleApp-Mac.app";
+			remoteRef = 422BA218175136DB009EC2B6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		422BA21B175136DB009EC2B6 /* UnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.octest;
+			remoteRef = 422BA21A175136DB009EC2B6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		42D3A1C21749E3F2000E7E96 /* Resources */ = {
@@ -200,12 +321,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				42D3A1D51749E3F2000E7E96 /* main.m in Sources */,
+				422BA1E517513462009EC2B6 /* OAuth.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		422BA21E175137B6009EC2B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "EvernoteSDK-Mac";
+			targetProxy = 422BA21D175137B6009EC2B6 /* PBXContainerItemProxy */;
+		};
 		42D3A1CD1749E3F2000E7E96 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 42D3A1C31749E3F2000E7E96 /* MacRubyTest */;
@@ -357,6 +484,7 @@
 				42D3A1E41749E3F2000E7E96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42D3A1E51749E3F2000E7E96 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
 			isa = XCConfigurationList;
@@ -365,6 +493,7 @@
 				42D3A1E71749E3F2000E7E96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
