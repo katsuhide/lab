@@ -7,14 +7,26 @@
 //
 
 #import "IEAppDelegate.h"
+#import <CommonCrypto/CommonCrypto.h>
+#import "NSData+EvernoteSDK.h"
 
 @implementation IEAppDelegate
+
+NSMutableArray *list;
 
 - (void)dealloc
 {
     [super dealloc];
 }
 
+- (void)setFiles:(NSString *) files
+{
+    [_array addObject:files];
+}
+
+/*
+ * アプリ起動時
+ */
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
@@ -27,7 +39,9 @@
                               consumerKey:CONSUMER_KEY
                            consumerSecret:CONSUMER_SECRET];
 
-    
+    _array = [[NSMutableArray alloc] initWithObjects:@"hoge", nil];
+    [_array addObject:@"array1"];
+    [_array addObject:@"array2"];
 }
 
 - (IBAction)hoge:(id)sender{
@@ -35,10 +49,11 @@
     [_notetitleField setStringValue:@"fugafuga"];
     NSString *str = _notetitleField.stringValue;
     NSLog(@"str:%@",str);
+    for (NSString *str in _array) {
+        NSLog(@"array:%@", str);
+    }
 
-    NSString *body = @"<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE en-note SYSTEM \"http://xml.evernote.com/pub/enml2.dtd\"><en-note>This is Mac SDK Test!!<br/>";
-    NSLog(@"body:%@", body);
-
+  
 }
 
 
@@ -55,10 +70,7 @@
         }
         else {
             NSLog(@"authenticationToken:%@", session.authenticationToken);
-            
             EvernoteNoteStore *noteStore = [EvernoteNoteStore noteStore];
-            _evernoteNoteStore = noteStore;
-            
             [self clearNotebookField:noteStore];
             
             
@@ -81,20 +93,17 @@
         }
         else {
             NSLog(@"authenticationToken:%@", session.authenticationToken);
-            
             EvernoteNoteStore *noteStore = [EvernoteNoteStore noteStore];
-            _evernoteNoteStore = noteStore;
+            [self addNote:noteStore];
             
-            [self addNote:_evernoteNoteStore];
             
         }
     }];
     
-    
 }
 
 /*
- * notebookの一覧を取得してcomboboxを初期化する
+ * NOTEBOOKの一覧を取得してcomboboxを初期化する
  */
 
 - (void)clearNotebookField:(EvernoteNoteStore*)noteStore {
@@ -112,41 +121,64 @@
 }
 
 /*
- * noteをポストする
+ * NOTEを追加登録する
  */
 - (void)addNote:(EvernoteNoteStore*)noteStore {
-    NSLog(@"addNote");
-    
+    // Note Titleの指定
+    NSString *noteTitle = @"Test Note - Evernote SDK";
+    // tagの指定
     NSMutableArray *tagNames = [NSMutableArray arrayWithObjects:@"evernote",@"sdk", nil];
-//    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"evernote_logo_4c-sm" ofType:@"png"];
-//    NSData *myFileData = [NSData dataWithContentsOfFile:filePath];
-//    NSData *dataHash = [myFileData enmd5];
-//    EDAMData *edamData = [[EDAMData alloc] initWithBodyHash:dataHash size:myFileData.length body:myFileData];
-//    EDAMResource* resource = [[EDAMResource alloc] initWithGuid:nil noteGuid:nil data:edamData mime:@"image/png" width:0 height:0 duration:0 active:0 recognition:0 attributes:nil updateSequenceNum:0 alternateData:nil];
-//    NSMutableArray *resources = [NSMutableArray arrayWithObjects:resource,resource, nil];
-//    EDAMNote* notebook = [[EDAMNote alloc] initWithGuid:nil title:@"Test Note - Evernote SDK" content:@"<strong>Here is my new HTML note</strong>" contentHash:nil contentLength:0 created:0 updated:0 deleted:0 active:YES updateSequenceNum:0 notebookGuid:nil tagGuids:nil resources:resources attributes:nil tagNames:tagNames];
+    // Notebookの指定
     
-    NSLog(@"2");
+    // 指定されたファイルパスからEDAMResourceを作成
+    NSString* filePath = @"/Users/AirMyac/Desktop/hoge.txt";
+    NSString *fileName = [filePath lastPathComponent];
+    NSString *mime = [self mimeTypeForFileAtPath:filePath];
+    NSData *myFileData = [NSData dataWithContentsOfFile:filePath];
+    NSData *dataHash = [myFileData enmd5];
+    EDAMData *edamData = [[EDAMData alloc] initWithBodyHash:dataHash size:myFileData.length body:myFileData];
+    EDAMResourceAttributes *attribute = [[EDAMResourceAttributes alloc] init];
+    attribute.fileName = fileName;
+    EDAMResource* resource = [[EDAMResource alloc] initWithGuid:nil noteGuid:nil data:edamData mime:mime width:0 height:0 duration:0 active:0 recognition:0 attributes:attribute updateSequenceNum:0 alternateData:nil];
 
-    NSString *body = @"<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE en-note SYSTEM \"http://xml.evernote.com/pub/enml2.dtd\"><en-note>This is Mac SDK Test!!<br/></en-note>";
-    NSLog(@"body:%@", body);
+    // EDAMResourceをリストに格納
+    NSMutableArray *resources = [NSMutableArray arrayWithObjects:resource, nil];
     
-    EDAMNote* notebook = [[EDAMNote alloc] initWithGuid:nil title:@"Test Note - Evernote SDK" content:body contentHash:nil contentLength:0 created:0 updated:0 deleted:0 active:YES updateSequenceNum:0 notebookGuid:nil tagGuids:nil resources:nil attributes:nil tagNames:tagNames];
+    // ENMLの作成
+    NSMutableString* body = [NSMutableString string];
+    [body appendFormat:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE en-note SYSTEM \"http://xml.evernote.com/pub/enml2.dtd\"><en-note>This is Mac SDK Test!!!!!!<br/><en-media type=\""];
+    [body appendFormat:mime];
+    [body appendFormat:@"\" hash=\""];
+    [body appendFormat: [dataHash enlowercaseHexDigits]];
+    [body appendFormat:@"\"/></en-note>"];
 
-//    [[EvernoteSession sharedSession] setDelegate:self];
-//    [noteStore saveNewNoteToEvernoteApp:note withType:@"text/html"];
-
-    NSLog(@"1");
-    
+    // NOTEを登録
+    EDAMNote* notebook = [[EDAMNote alloc] initWithGuid:nil title:noteTitle content:body contentHash:nil contentLength:0 created:0 updated:0 deleted:0 active:YES updateSequenceNum:0 notebookGuid:nil tagGuids:nil resources:resources attributes:nil tagNames:tagNames];
     [noteStore createNote:notebook success:^(EDAMNote *note) {
-        NSLog(@"hoge");
+        NSLog(@"add note succeded!!");
         
     } failure:^(NSError *error) {
-        NSLog(@"add note:%@", error);
+        NSLog(@"add note filed: %@", error);
     }];
 
-    NSLog(@"3");
-
 }
+
+/*
+ * ファイルパスからMIMEを取得する
+ */
+- (NSString*) mimeTypeForFileAtPath: (NSString *) path {
+    if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        return nil;
+    }
+    CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (CFStringRef)[path pathExtension], NULL);
+    CFStringRef mimeType = UTTypeCopyPreferredTagWithClass (UTI, kUTTagClassMIMEType);
+    CFRelease(UTI);
+    if (!mimeType) {
+        return @"application/octet-stream";
+    }
+    return [NSMakeCollectable((NSString *)mimeType) autorelease];
+}
+
+
 
 @end

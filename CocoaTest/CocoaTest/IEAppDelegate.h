@@ -15,6 +15,9 @@
 @property (assign) IBOutlet NSTextField *notetitleField;
 @property (assign) IBOutlet NSTokenField *tagField;
 @property (assign) IBOutlet NSComboBox *notebookField;
-@property (assign) EvernoteNoteStore *evernoteNoteStore;
+@property (assign) NSMutableArray *attachFiles;
+@property (assign) NSMutableArray *array;
+
+-(void)setFiles:(NSString *) files;
 
 @end

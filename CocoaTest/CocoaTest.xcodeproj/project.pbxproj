@@ -16,8 +16,7 @@
 		4246FC0A1751FA9300F52B1C /* DropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4246FC091751FA9300F52B1C /* DropView.m */; };
 		4246FC201752012400F52B1C /* EvernoteSDK-Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4246FC171752010C00F52B1C /* EvernoteSDK-Mac.framework */; };
 		4246FC221752013700F52B1C /* EvernoteSDK-Mac.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4246FC171752010C00F52B1C /* EvernoteSDK-Mac.framework */; };
-		427FEE7C1752882A003A19C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 427FEE791752882A003A19C3 /* Default-568h@2x.png */; };
-		427FEE7D1752882A003A19C3 /* evernote_logo_4c-sm.png in Resources */ = {isa = PBXBuildFile; fileRef = 427FEE7B1752882A003A19C3 /* evernote_logo_4c-sm.png */; };
+		42D2C6321754E05C0049263F /* NSData+EvernoteSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D2C6311754E05C0049263F /* NSData+EvernoteSDK.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,8 +94,8 @@
 		4246FC081751FA9300F52B1C /* DropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropView.h; sourceTree = "<group>"; };
 		4246FC091751FA9300F52B1C /* DropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropView.m; sourceTree = "<group>"; };
 		4246FC0C1752010B00F52B1C /* EvernoteSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EvernoteSDK.xcodeproj; path = "../../evernote-sdk-mac-master/EvernoteSDK.xcodeproj"; sourceTree = "<group>"; };
-		427FEE791752882A003A19C3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		427FEE7B1752882A003A19C3 /* evernote_logo_4c-sm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "evernote_logo_4c-sm.png"; sourceTree = "<group>"; };
+		42D2C62B1754DFF30049263F /* NSData+EvernoteSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+EvernoteSDK.h"; sourceTree = "<group>"; };
+		42D2C6311754E05C0049263F /* NSData+EvernoteSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+EvernoteSDK.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +158,8 @@
 				4246FBEF1751D6D900F52B1C /* Supporting Files */,
 				4246FC081751FA9300F52B1C /* DropView.h */,
 				4246FC091751FA9300F52B1C /* DropView.m */,
+				42D2C62B1754DFF30049263F /* NSData+EvernoteSDK.h */,
+				42D2C6311754E05C0049263F /* NSData+EvernoteSDK.m */,
 			);
 			path = CocoaTest;
 			sourceTree = "<group>";
@@ -190,18 +191,8 @@
 		427FEE73175287B2003A19C3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				427FEE791752882A003A19C3 /* Default-568h@2x.png */,
-				427FEE7A1752882A003A19C3 /* Images */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		427FEE7A1752882A003A19C3 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				427FEE7B1752882A003A19C3 /* evernote_logo_4c-sm.png */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,8 +296,6 @@
 				4246FBF31751D6D900F52B1C /* InfoPlist.strings in Resources */,
 				4246FBF91751D6D900F52B1C /* Credits.rtf in Resources */,
 				4246FBFF1751D6D900F52B1C /* MainMenu.xib in Resources */,
-				427FEE7C1752882A003A19C3 /* Default-568h@2x.png in Resources */,
-				427FEE7D1752882A003A19C3 /* evernote_logo_4c-sm.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +309,7 @@
 				4246FBF51751D6D900F52B1C /* main.m in Sources */,
 				4246FBFC1751D6D900F52B1C /* IEAppDelegate.m in Sources */,
 				4246FC0A1751FA9300F52B1C /* DropView.m in Sources */,
+				42D2C6321754E05C0049263F /* NSData+EvernoteSDK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

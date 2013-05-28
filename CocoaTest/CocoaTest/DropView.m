@@ -7,8 +7,11 @@
 //
 
 #import "DropView.h"
+#import "IEAppDelegate.h"
 
 @implementation DropView
+
+extern NSMutableArray *list;
 
 - (id)initWithFrame:(NSRect)frame
 {
@@ -58,7 +61,15 @@
     
     if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
         NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
+        IEAppDelegate *appDelegate = (IEAppDelegate*)[[NSApplication sharedApplication] delegate];
+        [appDelegate.array removeAllObjects];
+        for(NSString *file in files){
+            [appDelegate setFiles:file];
+            NSLog(@"%@", file);
+            appDelegate.test = @"hogehoge";
+        }
         NSLog(@"%@", files);
+
     }
     return YES;
 }
