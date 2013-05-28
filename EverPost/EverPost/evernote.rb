@@ -106,6 +106,7 @@ def create_note(note_data)
 
 		mime_types.push(mime_type)
 		hashHexs.push(hashHex)
+		puts hashHex;
 	end
 
 	note.content  = create_content(filenames, mime_types, hashHexs)

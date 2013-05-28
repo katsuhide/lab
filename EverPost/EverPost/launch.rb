@@ -2,7 +2,7 @@
 require 'rubygems'
 $LOAD_PATH.push(Dir::pwd) 
 
-require "add_note"
+require "evernote"
 
 def create_data()
 	data = Hash.new
@@ -19,7 +19,7 @@ conffile = "evernote.yaml"
 authToken = login(conffile)
 noteStore = create_noteStore(authToken)
 notebooks = get_notebook_list(authToken, noteStore)
-puts notebooks
-# note = create_note(create_data())
+# puts notebooks
+note = create_note(create_data())
 # puts note
 # post(authToken, noteStore, note)
