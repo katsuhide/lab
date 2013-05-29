@@ -62,13 +62,11 @@ extern NSMutableArray *list;
     if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
         NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
         IEAppDelegate *appDelegate = (IEAppDelegate*)[[NSApplication sharedApplication] delegate];
-        [appDelegate.array removeAllObjects];
-        for(NSString *file in files){
-            [appDelegate setFiles:file];
-            NSLog(@"%@", file);
-            appDelegate.test = @"hogehoge";
-        }
         NSLog(@"%@", files);
+        // 初期化(TODO:ここで初期化しない方がいい？
+//        [appDelegate.attachFiles removeAllObjects];
+        // ドラッグされたファイルを対象ファイルにセット
+        [appDelegate.attachFiles addObjectsFromArray:files];
 
     }
     return YES;
