@@ -15,8 +15,8 @@
 		4246FBFF1751D6D900F52B1C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4246FBFD1751D6D900F52B1C /* MainMenu.xib */; };
 		4246FC0A1751FA9300F52B1C /* DropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4246FC091751FA9300F52B1C /* DropView.m */; };
 		4246FC201752012400F52B1C /* EvernoteSDK-Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4246FC171752010C00F52B1C /* EvernoteSDK-Mac.framework */; };
-		4246FC221752013700F52B1C /* EvernoteSDK-Mac.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4246FC171752010C00F52B1C /* EvernoteSDK-Mac.framework */; };
 		42D2C6321754E05C0049263F /* NSData+EvernoteSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D2C6311754E05C0049263F /* NSData+EvernoteSDK.m */; };
+		42F0D2931757E45400D52F34 /* EvernoteSDK-Mac.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4246FC171752010C00F52B1C /* EvernoteSDK-Mac.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +71,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4246FC221752013700F52B1C /* EvernoteSDK-Mac.framework in CopyFiles */,
+				42F0D2931757E45400D52F34 /* EvernoteSDK-Mac.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +412,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaTest/CocoaTest-Prefix.pch";
 				INFOPLIST_FILE = "CocoaTest/CocoaTest-Info.plist";
@@ -424,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaTest/CocoaTest-Prefix.pch";
 				INFOPLIST_FILE = "CocoaTest/CocoaTest-Info.plist";
