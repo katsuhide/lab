@@ -7,60 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420812721758E4580084E4BD /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 420812711758E4580084E4BD /* Task.m */; };
+		4208127A1758E5830084E4BD /* TaskForSkype.m in Sources */ = {isa = PBXBuildFile; fileRef = 420812791758E5830084E4BD /* TaskForSkype.m */; };
+		4208127D1758E7A60084E4BD /* TaskForFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 4208127C1758E7A60084E4BD /* TaskForFile.m */; };
+		420812821758F4200084E4BD /* NSDate+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 420812811758F4200084E4BD /* NSDate+Util.m */; };
+		42081284175902DC0084E4BD /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42081283175902DC0084E4BD /* libsqlite3.0.dylib */; };
+		42081287175902FB0084E4BD /* SQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42081286175902FB0084E4BD /* SQLiteManager.m */; };
+		4208129C17592FB70084E4BD /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4208129317592FB70084E4BD /* FMDatabase.m */; };
+		4208129D17592FB70084E4BD /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4208129517592FB70084E4BD /* FMDatabaseAdditions.m */; };
+		4208129E17592FB70084E4BD /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4208129717592FB70084E4BD /* FMDatabasePool.m */; };
+		4208129F17592FB70084E4BD /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4208129917592FB70084E4BD /* FMDatabaseQueue.m */; };
+		420812A017592FB70084E4BD /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4208129B17592FB70084E4BD /* FMResultSet.m */; };
 		429E708B1757B7D100D2E42F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429E708A1757B7D100D2E42F /* Cocoa.framework */; };
 		429E70951757B7D100D2E42F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 429E70931757B7D100D2E42F /* InfoPlist.strings */; };
 		429E70971757B7D100D2E42F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 429E70961757B7D100D2E42F /* main.m */; };
 		429E709B1757B7D100D2E42F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 429E70991757B7D100D2E42F /* Credits.rtf */; };
 		429E709E1757B7D100D2E42F /* IEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 429E709D1757B7D100D2E42F /* IEAppDelegate.m */; };
 		429E70A11757B7D100D2E42F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 429E709F1757B7D100D2E42F /* MainMenu.xib */; };
-		429E70B91757B7F000D2E42F /* EvernoteSDK-Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429E70B21757B7E600D2E42F /* EvernoteSDK-Mac.framework */; };
-		429E70BD1757B80700D2E42F /* EvernoteSDK-Mac.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 429E70B21757B7E600D2E42F /* EvernoteSDK-Mac.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		429E70AF1757B7E600D2E42F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 429E70A71757B7E500D2E42F /* EvernoteSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0BB3D1AD1524ED96001C4534;
-			remoteInfo = EvernoteSDK;
-		};
-		429E70B11757B7E600D2E42F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 429E70A71757B7E500D2E42F /* EvernoteSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 43741864170ADB2400D2BE51;
-			remoteInfo = "EvernoteSDK-Mac";
-		};
-		429E70B31757B7E600D2E42F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 429E70A71757B7E500D2E42F /* EvernoteSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0BB3D26E1524EF37001C4534;
-			remoteInfo = "SampleApp-iOS";
-		};
-		429E70B51757B7E600D2E42F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 429E70A71757B7E500D2E42F /* EvernoteSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 437418AC170ADCD600D2BE51;
-			remoteInfo = "SampleApp-Mac";
-		};
-		429E70B71757B7E600D2E42F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 429E70A71757B7E500D2E42F /* EvernoteSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0BDBBC431550A11A003E6681;
-			remoteInfo = UnitTests;
-		};
-		429E70BA1757B7F700D2E42F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 429E70A71757B7E500D2E42F /* EvernoteSDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 43741863170ADB2400D2BE51;
-			remoteInfo = "EvernoteSDK-Mac";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		429E70BC1757B7FC00D2E42F /* CopyFiles */ = {
@@ -69,13 +33,33 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				429E70BD1757B80700D2E42F /* EvernoteSDK-Mac.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		420812701758E4580084E4BD /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		420812711758E4580084E4BD /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		420812781758E5830084E4BD /* TaskForSkype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskForSkype.h; sourceTree = "<group>"; };
+		420812791758E5830084E4BD /* TaskForSkype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskForSkype.m; sourceTree = "<group>"; };
+		4208127B1758E7A60084E4BD /* TaskForFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskForFile.h; sourceTree = "<group>"; };
+		4208127C1758E7A60084E4BD /* TaskForFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskForFile.m; sourceTree = "<group>"; };
+		420812801758F4200084E4BD /* NSDate+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Util.h"; sourceTree = "<group>"; };
+		420812811758F4200084E4BD /* NSDate+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Util.m"; sourceTree = "<group>"; };
+		42081283175902DC0084E4BD /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		42081285175902FB0084E4BD /* SQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteManager.h; sourceTree = "<group>"; };
+		42081286175902FB0084E4BD /* SQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteManager.m; sourceTree = "<group>"; };
+		4208129217592FB70084E4BD /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		4208129317592FB70084E4BD /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		4208129417592FB70084E4BD /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		4208129517592FB70084E4BD /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		4208129617592FB70084E4BD /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		4208129717592FB70084E4BD /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		4208129817592FB70084E4BD /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		4208129917592FB70084E4BD /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		4208129A17592FB70084E4BD /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		4208129B17592FB70084E4BD /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		429E70871757B7D100D2E42F /* TimerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		429E708A1757B7D100D2E42F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		429E708D1757B7D100D2E42F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -89,7 +73,6 @@
 		429E709C1757B7D100D2E42F /* IEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IEAppDelegate.h; sourceTree = "<group>"; };
 		429E709D1757B7D100D2E42F /* IEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IEAppDelegate.m; sourceTree = "<group>"; };
 		429E70A01757B7D100D2E42F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		429E70A71757B7E500D2E42F /* EvernoteSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EvernoteSDK.xcodeproj; path = "../../evernote-sdk-mac-master/EvernoteSDK.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				429E70B91757B7F000D2E42F /* EvernoteSDK-Mac.framework in Frameworks */,
+				42081284175902DC0084E4BD /* libsqlite3.0.dylib in Frameworks */,
 				429E708B1757B7D100D2E42F /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,10 +88,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4208129117592F590084E4BD /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				4208129217592FB70084E4BD /* FMDatabase.h */,
+				4208129317592FB70084E4BD /* FMDatabase.m */,
+				4208129417592FB70084E4BD /* FMDatabaseAdditions.h */,
+				4208129517592FB70084E4BD /* FMDatabaseAdditions.m */,
+				4208129617592FB70084E4BD /* FMDatabasePool.h */,
+				4208129717592FB70084E4BD /* FMDatabasePool.m */,
+				4208129817592FB70084E4BD /* FMDatabaseQueue.h */,
+				4208129917592FB70084E4BD /* FMDatabaseQueue.m */,
+				4208129A17592FB70084E4BD /* FMResultSet.h */,
+				4208129B17592FB70084E4BD /* FMResultSet.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
 		429E707E1757B7D100D2E42F = {
 			isa = PBXGroup;
 			children = (
-				429E70A71757B7E500D2E42F /* EvernoteSDK.xcodeproj */,
+				42081283175902DC0084E4BD /* libsqlite3.0.dylib */,
 				429E70901757B7D100D2E42F /* TimerTest */,
 				429E70891757B7D100D2E42F /* Frameworks */,
 				429E70881757B7D100D2E42F /* Products */,
@@ -145,10 +145,21 @@
 		429E70901757B7D100D2E42F /* TimerTest */ = {
 			isa = PBXGroup;
 			children = (
+				4208129117592F590084E4BD /* FMDB */,
 				429E709C1757B7D100D2E42F /* IEAppDelegate.h */,
 				429E709D1757B7D100D2E42F /* IEAppDelegate.m */,
 				429E709F1757B7D100D2E42F /* MainMenu.xib */,
 				429E70911757B7D100D2E42F /* Supporting Files */,
+				420812701758E4580084E4BD /* Task.h */,
+				420812781758E5830084E4BD /* TaskForSkype.h */,
+				420812791758E5830084E4BD /* TaskForSkype.m */,
+				4208127B1758E7A60084E4BD /* TaskForFile.h */,
+				4208127C1758E7A60084E4BD /* TaskForFile.m */,
+				420812711758E4580084E4BD /* Task.m */,
+				420812801758F4200084E4BD /* NSDate+Util.h */,
+				420812811758F4200084E4BD /* NSDate+Util.m */,
+				42081285175902FB0084E4BD /* SQLiteManager.h */,
+				42081286175902FB0084E4BD /* SQLiteManager.m */,
 			);
 			path = TimerTest;
 			sourceTree = "<group>";
@@ -163,18 +174,6 @@
 				429E70991757B7D100D2E42F /* Credits.rtf */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		429E70A81757B7E500D2E42F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				429E70B01757B7E600D2E42F /* libEvernoteSDK.a */,
-				429E70B21757B7E600D2E42F /* EvernoteSDK-Mac.framework */,
-				429E70B41757B7E600D2E42F /* SampleApp-iOS.app */,
-				429E70B61757B7E600D2E42F /* SampleApp-Mac.app */,
-				429E70B81757B7E600D2E42F /* UnitTests.octest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +191,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				429E70BB1757B7F700D2E42F /* PBXTargetDependency */,
 			);
 			name = TimerTest;
 			productName = TimerTest;
@@ -219,56 +217,12 @@
 			mainGroup = 429E707E1757B7D100D2E42F;
 			productRefGroup = 429E70881757B7D100D2E42F /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 429E70A81757B7E500D2E42F /* Products */;
-					ProjectRef = 429E70A71757B7E500D2E42F /* EvernoteSDK.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				429E70861757B7D100D2E42F /* TimerTest */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		429E70B01757B7E600D2E42F /* libEvernoteSDK.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libEvernoteSDK.a;
-			remoteRef = 429E70AF1757B7E600D2E42F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		429E70B21757B7E600D2E42F /* EvernoteSDK-Mac.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = "EvernoteSDK-Mac.framework";
-			remoteRef = 429E70B11757B7E600D2E42F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		429E70B41757B7E600D2E42F /* SampleApp-iOS.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "SampleApp-iOS.app";
-			remoteRef = 429E70B31757B7E600D2E42F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		429E70B61757B7E600D2E42F /* SampleApp-Mac.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "SampleApp-Mac.app";
-			remoteRef = 429E70B51757B7E600D2E42F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		429E70B81757B7E600D2E42F /* UnitTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = UnitTests.octest;
-			remoteRef = 429E70B71757B7E600D2E42F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		429E70851757B7D100D2E42F /* Resources */ = {
@@ -290,18 +244,20 @@
 			files = (
 				429E70971757B7D100D2E42F /* main.m in Sources */,
 				429E709E1757B7D100D2E42F /* IEAppDelegate.m in Sources */,
+				420812721758E4580084E4BD /* Task.m in Sources */,
+				4208127A1758E5830084E4BD /* TaskForSkype.m in Sources */,
+				4208127D1758E7A60084E4BD /* TaskForFile.m in Sources */,
+				420812821758F4200084E4BD /* NSDate+Util.m in Sources */,
+				42081287175902FB0084E4BD /* SQLiteManager.m in Sources */,
+				4208129C17592FB70084E4BD /* FMDatabase.m in Sources */,
+				4208129D17592FB70084E4BD /* FMDatabaseAdditions.m in Sources */,
+				4208129E17592FB70084E4BD /* FMDatabasePool.m in Sources */,
+				4208129F17592FB70084E4BD /* FMDatabaseQueue.m in Sources */,
+				420812A017592FB70084E4BD /* FMResultSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		429E70BB1757B7F700D2E42F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "EvernoteSDK-Mac";
-			targetProxy = 429E70BA1757B7F700D2E42F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		429E70931757B7D100D2E42F /* InfoPlist.strings */ = {

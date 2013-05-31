@@ -7,6 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Task.h"
+#import "TaskForSkype.h"
+#import "TaskForFile.h"
+#import "NSDate+Util.h"
+#import "SQLiteManager.h"
+#import "FMDatabase.h"
 
 @interface IEAppDelegate : NSObject <NSApplicationDelegate>
 
