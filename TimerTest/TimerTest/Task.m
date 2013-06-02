@@ -20,16 +20,29 @@
     return self;
 }
 
-- (id)initWith:(NSString *)str{
-    self.lastExecuteTime = [[NSMutableString alloc] initWithString:str];
-    return self;
+/*
+ * タスクの実行判定
+ */
+- (BOOL) check {
+    return YES;
 }
 
+
+/*
+ * タスクの処理内容
+ */
 - (void) execute {
 
     NSLog(@"Task Class method.");
     NSLog(@"%@", self.lastExecuteTime);
 
 }
+
+
+- (id)initWith:(NSString *)str{
+    self.lastExecuteTime = [[NSMutableString alloc] initWithString:str];
+    return self;
+}
+
 
 @end

@@ -1,3 +1,4 @@
+# encoding: utf-8
 #
 #  evernote.rb
 #  EverPost
@@ -5,7 +6,6 @@
 #  Created by AirMyac on 5/25/13.
 #  Copyright 2013 com.katzlifehack. All rights reserved.
 #
-# encoding: utf-8
 require "digest/md5"
 require 'evernote_oauth'
 require 'mimemagic'
@@ -142,3 +142,23 @@ EOF
 	return content 
 end
 
+# Simple Noteのオブジェクトを作成
+def create_simple_note(note_data)
+	note = Evernote::EDAM::Type::Note.new
+	note.title = note_data.fetch('title')
+	note.notebookGuid = note_data.fetch('notebook')
+	note.tagNames = note_data.fetch('tag')
+content = <<-EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+
+	<p><span style="color:#849A9A;font-size:80%">Takuro Monji : 2013-03-14 16:39:46</span><br/><span>IE6 かもしれないけどね、、、</span></p>
+	<p style="background-color:#EBF2FF"><span style="color:#849A9A;font-size:80%">Takuro Monji, 2013-03-14 16:39:46,</span><br/><span>IE6 かもしれないけどね、、、</span></p>
+
+</en-note>
+EOF
+	p content
+	note.content = content 
+	return note
+end

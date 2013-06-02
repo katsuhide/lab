@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CocoaTest/IEAppDelegate.m"
-         timestampString = "391531647.227654"
+         timestampString = "391851279.864427"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "168"
-         endingLineNumber = "168"
+         startingLineNumber = "169"
+         endingLineNumber = "169"
          landmarkName = "-addNote:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CocoaTest/IEAppDelegate.m"
-         timestampString = "391531647.227654"
+         timestampString = "391851279.864427"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "167"
-         endingLineNumber = "167"
+         startingLineNumber = "168"
+         endingLineNumber = "168"
          landmarkName = "-addNote:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -125,11 +125,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CocoaTest/IEAppDelegate.m"
-         timestampString = "391531647.227654"
+         timestampString = "391851279.864427"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "182"
-         endingLineNumber = "182"
+         startingLineNumber = "183"
+         endingLineNumber = "183"
          landmarkName = "-createResources:andResouces:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -151,11 +151,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CocoaTest/IEAppDelegate.m"
-         timestampString = "391531647.227654"
+         timestampString = "391851279.864427"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "164"
          endingLineNumber = "164"
+         landmarkName = "-addNote:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "CocoaTest/IEAppDelegate.m"
+         timestampString = "391851279.864427"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "166"
+         endingLineNumber = "166"
          landmarkName = "-addNote:"
          landmarkType = "5">
       </FileBreakpoint>

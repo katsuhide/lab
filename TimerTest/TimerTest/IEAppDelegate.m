@@ -19,35 +19,8 @@
 {
     // Insert code here to initialize your application
 
-    // DB設定情報
-    NSString *databaseName = @"main.db";
-    NSString *path = @"/Users/AirMyac/Library/Application Support/Skype/katsuhide1982";
-    NSString *databasePath = [path stringByAppendingPathComponent:databaseName];
-    FMDatabase *db  = [FMDatabase databaseWithPath:databasePath];
-    // Query
-    NSString *sql = @"select distinct participants from chats;";
-
-    // Open DB
-    [db open];
-    // Execute Query
-    FMResultSet *results = [db executeQuery:sql];
-    
-    // Output
-    while ([results next]) {
-        NSLog(@"%@", [results stringForColumn:@"participants"]);
-    }
-    
-    // Release result set
-    [results close];
-    
-    sql = @"select from_dispname, datetime(timestamp,\"unixepoch\",\"localtime\") as datetime, body_xml from messages where convo_id = (select conv_dbid from chats where participants = 'katsuhide1982 monji.takuro reqotan yota_sato');";
-    results = [db executeQuery:sql];
-    while ([results next]) {
-        NSLog(@"%@, %@, %@", [results stringForColumn:@"from_dispname"], [results stringForColumn:@"datetime"], [results stringForColumn:@"body_xml"]);
-    }
-
-    // Close DB
-    [db close];
+    Task *skypeTask = [[TaskForSkype alloc]init];
+    [skypeTask execute];
     
 
 }

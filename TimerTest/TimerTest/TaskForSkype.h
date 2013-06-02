@@ -7,7 +7,10 @@
 //
 
 #import "Task.h"
+#import "FMDatabase.h"
 
 @interface TaskForSkype : Task
+
+@property (assign) NSMutableString *participants;
 
 @end

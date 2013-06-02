@@ -10,11 +10,30 @@
 
 @interface Task : NSObject
 
+
+@property (assign) NSMutableString *taskName;
+
+@property (assign) NSMutableString *interval;
+
 @property (assign) NSMutableString *lastExecuteTime;
 
+@property (assign) NSMutableString *noteTitle;
+
+@property (assign) NSMutableString *noteBook;
+
+@property (assign) NSMutableString *tag;
+
+
+/*
+ * タスクの実行判定
+ */
+- (BOOL) check;
+
+/*
+ * タスクの処理内容
+ */
+- (void) execute;
 
 - (id) initWith:(NSString *)str;
-
-- (void) execute;
 
 @end
