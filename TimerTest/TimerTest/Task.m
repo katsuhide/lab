@@ -32,10 +32,8 @@
  * タスクの処理内容
  */
 - (void) execute {
-
-    NSLog(@"Task Class method.");
-    NSLog(@"%@", self.lastExecuteTime);
-
+    NSLog(@"Task Class : %@", self.lastExecuteTime);
+    
 }
 
 
