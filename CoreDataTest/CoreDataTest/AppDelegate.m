@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "Hoge.h"
 #import "Fuga.h"
+#import "TaskSource.h"
+#import "Notebook.h"
 
 @implementation AppDelegate
 
@@ -54,34 +56,8 @@
         return nil;
     }
     
-    NSFileManager *fileManager = [NSFileManager defaultManager];
     NSURL *applicationFilesDirectory = [self applicationFilesDirectory];
     NSError *error = nil;
-    
-//    NSDictionary *properties = [applicationFilesDirectory resourceValuesForKeys:@[NSURLIsDirectoryKey] error:&error];
-//    
-//    if (!properties) {
-//        BOOL ok = NO;
-//        if ([error code] == NSFileReadNoSuchFileError) {
-//            ok = [fileManager createDirectoryAtPath:[applicationFilesDirectory path] withIntermediateDirectories:YES attributes:nil error:&error];
-//        }
-//        if (!ok) {
-//            [[NSApplication sharedApplication] presentError:error];
-//            return nil;
-//        }
-//    } else {
-//        if (![properties[NSURLIsDirectoryKey] boolValue]) {
-//            // Customize and localize this error.
-//            NSString *failureDescription = [NSString stringWithFormat:@"Expected a folder to store application data, found a file (%@).", [applicationFilesDirectory path]];
-//            
-//            NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-//            [dict setValue:failureDescription forKey:NSLocalizedDescriptionKey];
-//            error = [NSError errorWithDomain:@"YOUR_ERROR_DOMAIN" code:101 userInfo:dict];
-//            
-//            [[NSApplication sharedApplication] presentError:error];
-//            return nil;
-//        }
-//    }
     
     NSURL *url = [applicationFilesDirectory URLByAppendingPathComponent:@"main.sqlite"];
 
@@ -90,12 +66,6 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
-    
-//    NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
-//    if (![coordinator addPersistentStoreWithType:NSXMLStoreType configuration:nil URL:url options:nil error:&error]) {
-//        [[NSApplication sharedApplication] presentError:error];
-//        return nil;
-//    }
     
     _persistentStoreCoordinator = coordinator;
     
@@ -191,7 +161,122 @@
     return NSTerminateNow;
 }
 
-- (IBAction)hoge:(id)sender{
+-(NSManagedObject*)insert:(NSString*)entity_name{
+    
+    return [NSEntityDescription insertNewObjectForEntityForName:entity_name inManagedObjectContext:self.managedObjectContext];
+
+}
+
+
+
+-(NSFetchRequest*)createRequest:(NSString*)entity_name{
+    return [[NSFetchRequest alloc] initWithEntityName:entity_name];
+}
+
+- (IBAction)select:(id)sender{
+    // TaskSource
+    NSFetchRequest *request = [self createRequest:@"TaskSource"];
+    NSError *error = nil;
+    NSArray *result = [self.managedObjectContext executeFetchRequest:request error:&error];
+    for(TaskSource *taskSource in result) {
+        [taskSource print];
+    }
+
+    // Notebook
+    request = [self createRequest:@"Notebook"];
+    result = [self.managedObjectContext executeFetchRequest:request error:&error];
+    for(Notebook *notebook in result) {
+        [notebook print];
+    }
+    
+    NSFetchRequest *fetchRequest = [self createRequest:@"TaskSource"];
+    
+    // ソート条件配列を作成
+    NSSortDescriptor *desc;
+    desc = [[NSSortDescriptor alloc] initWithKey:@"interval" ascending:NO];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:desc, nil];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    // 取得条件の設定
+//    NSPredicate *pred = [NSPredicate predicateWithFormat:@"task_name = %@", @"task1"];
+//    [fetchRequest setPredicate:pred];
+    
+    // 取得最大数の設定
+//    [fetchRequest setFetchBatchSize:10];
+    [fetchRequest setFetchLimit:1];
+    
+    // データ取得用コントローラを作成
+    NSArray *result3 = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    NSLog(@"fetch");
+    for(TaskSource *taskSource in result3) {
+        [taskSource print];
+    }
+
+    
+    NSLog(@"sum");
+    request = [self createRequest:@"TaskSource"];
+
+    //集計の対象を設定します。
+    NSExpression *keyPathExpression = [NSExpression expressionForKeyPath:@"interval"];
+    
+    //集計関数(sum)の指定
+    NSExpression *expression = [NSExpression expressionForFunction:@"sum:" arguments:[NSArray arrayWithObject:keyPathExpression]];
+    
+    //集計式の対象（NSExpressionDescription ）
+    NSExpressionDescription *expressionDescription = [[NSExpressionDescription alloc] init];
+    [expressionDescription setName:@"sumInterval"]; //集計式の名
+    [expressionDescription setExpression:expression]; //集計関数
+    [expressionDescription setExpressionResultType:NSInteger32AttributeType]; //結果の種類
+    
+    //集計式の対象をリクエストに設置します。集計グールプを「month」に設定します。
+    [request setPropertiesToGroupBy:[NSArray arrayWithObject:@"task_name"]];
+    [request setPropertiesToFetch:[NSArray arrayWithObjects: expressionDescription, @"task_name", Nil]];
+    [request setResultType:NSDictionaryResultType];
+    
+    
+    //結果を取得します。
+    NSArray *objs= [self.managedObjectContext executeFetchRequest:request error:nil];
+    for(int i=0; i < objs.count; i++){
+        NSArray *array = [objs objectAtIndex:i];
+        NSLog(@"%@:%@", [array valueForKey:@"task_name"], [array valueForKey:@"sumInterval"]);
+    }
+    
+}
+
+
+
+- (IBAction)setup:(id)sender{
+    // Taskのレコードを登録
+    TaskSource *taskSource = (TaskSource*)[self insert:@"TaskSource"];
+    taskSource.task_name = @"task1";
+    taskSource.interval = [[NSNumber alloc]initWithInt:10];
+    taskSource.tag = @"tag1,tag2,tag3";
+    taskSource.params = @"key1:value1,key2:value2";
+
+    NSFetchRequest *request = [self createRequest:@"Notebook"];
+    NSError *error = nil;
+    NSArray *result = [self.managedObjectContext executeFetchRequest:request error:&error];
+    Notebook *notebook = [result objectAtIndex:0];
+//    Notebook *notebook = (Notebook*)[self insert:@"Notebook"];
+//    notebook.guid = @"0001";
+//    notebook.name = @"notebook1";
+    taskSource.notebook = notebook;
+    [self save];
+    NSLog(@"setup end.");
+    
+}
+
+-(void)save{
+    NSError *error = nil;
+    if (![[self managedObjectContext] commitEditing]) {
+        NSLog(@"%@:%@ unable to commit editing before saving", [self class], NSStringFromSelector(_cmd));
+    }
+    if (![[self managedObjectContext] save:&error]) {
+        [[NSApplication sharedApplication] presentError:error];
+    }
+}
+
+- (IBAction)hog2:(id)sender{
     NSLog(@"insert");
     Hoge *hoge = [NSEntityDescription insertNewObjectForEntityForName:@"Hoge" inManagedObjectContext:self.managedObjectContext];
     hoge.name = @"test";

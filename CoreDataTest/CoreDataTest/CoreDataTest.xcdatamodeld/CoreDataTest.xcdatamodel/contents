@@ -8,8 +8,24 @@
     <entity name="Hoge" representedClassName="Hoge" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Notebook" representedClassName="Notebook" syncable="YES">
+        <attribute name="guid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TaskSource" representedClassName="TaskSource" syncable="YES">
+        <attribute name="interval" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="last_execute_time" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="note_title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="params" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="task_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="notebook" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Notebook" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Hoge" positionX="160" positionY="192" width="128" height="60"/>
         <element name="Fuga" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Hoge" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="TaskSource" positionX="160" positionY="192" width="128" height="163"/>
+        <element name="Notebook" positionX="421" positionY="189" width="128" height="73"/>
     </elements>
 </model>

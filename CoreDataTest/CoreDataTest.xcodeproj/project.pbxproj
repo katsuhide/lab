@@ -16,6 +16,8 @@
 		42564143175C65FD00AB0958 /* CoreDataTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42564141175C65FD00AB0958 /* CoreDataTest.xcdatamodeld */; };
 		4256414B175C6AB000AB0958 /* Hoge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4256414A175C6AB000AB0958 /* Hoge.m */; };
 		42564151175C748100AB0958 /* Fuga.m in Sources */ = {isa = PBXBuildFile; fileRef = 42564150175C748100AB0958 /* Fuga.m */; };
+		42BF47D1175C914A00C4E7F4 /* Notebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BF47D0175C914A00C4E7F4 /* Notebook.m */; };
+		42BF47DD175CB30900C4E7F4 /* TaskSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BF47DC175CB30900C4E7F4 /* TaskSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		4256414A175C6AB000AB0958 /* Hoge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hoge.m; sourceTree = "<group>"; };
 		4256414F175C748100AB0958 /* Fuga.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fuga.h; sourceTree = "<group>"; };
 		42564150175C748100AB0958 /* Fuga.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fuga.m; sourceTree = "<group>"; };
+		42BF47CF175C914A00C4E7F4 /* Notebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notebook.h; sourceTree = "<group>"; };
+		42BF47D0175C914A00C4E7F4 /* Notebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notebook.m; sourceTree = "<group>"; };
+		42BF47DB175CB30900C4E7F4 /* TaskSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskSource.h; sourceTree = "<group>"; };
+		42BF47DC175CB30900C4E7F4 /* TaskSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +101,11 @@
 				4256413E175C65FD00AB0958 /* MainMenu.xib */,
 				4256414F175C748100AB0958 /* Fuga.h */,
 				42564150175C748100AB0958 /* Fuga.m */,
+				42BF47DB175CB30900C4E7F4 /* TaskSource.h */,
+				42BF47DC175CB30900C4E7F4 /* TaskSource.m */,
 				42564141175C65FD00AB0958 /* CoreDataTest.xcdatamodeld */,
+				42BF47CF175C914A00C4E7F4 /* Notebook.h */,
+				42BF47D0175C914A00C4E7F4 /* Notebook.m */,
 				42564149175C6AB000AB0958 /* Hoge.h */,
 				4256414A175C6AB000AB0958 /* Hoge.m */,
 				42564130175C65FC00AB0958 /* Supporting Files */,
@@ -184,6 +194,8 @@
 				42564143175C65FD00AB0958 /* CoreDataTest.xcdatamodeld in Sources */,
 				4256414B175C6AB000AB0958 /* Hoge.m in Sources */,
 				42564151175C748100AB0958 /* Fuga.m in Sources */,
+				42BF47D1175C914A00C4E7F4 /* Notebook.m in Sources */,
+				42BF47DD175CB30900C4E7F4 /* TaskSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +331,7 @@
 				42564148175C65FD00AB0958 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -20,4 +20,8 @@
 
 - (IBAction)hoge:(id)sender;
 
+- (IBAction)setup:(id)sender;
+
+- (IBAction)select:(id)sender;
+
 @end
