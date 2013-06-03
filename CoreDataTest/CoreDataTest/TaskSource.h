@@ -22,4 +22,6 @@
 @property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) Notebook *notebook;
 
+-(void)print;
+
 @end

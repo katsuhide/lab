@@ -18,6 +18,8 @@
 		4208129E17592FB70084E4BD /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4208129717592FB70084E4BD /* FMDatabasePool.m */; };
 		4208129F17592FB70084E4BD /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4208129917592FB70084E4BD /* FMDatabaseQueue.m */; };
 		420812A017592FB70084E4BD /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4208129B17592FB70084E4BD /* FMResultSet.m */; };
+		4220E818175CB4EA007F5160 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4220E816175CB4EA007F5160 /* Model.xcdatamodeld */; };
+		4220E81B175CB534007F5160 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 4220E81A175CB534007F5160 /* Test.m */; };
 		429E708B1757B7D100D2E42F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429E708A1757B7D100D2E42F /* Cocoa.framework */; };
 		429E70951757B7D100D2E42F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 429E70931757B7D100D2E42F /* InfoPlist.strings */; };
 		429E70971757B7D100D2E42F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 429E70961757B7D100D2E42F /* main.m */; };
@@ -60,6 +62,9 @@
 		4208129917592FB70084E4BD /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
 		4208129A17592FB70084E4BD /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		4208129B17592FB70084E4BD /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		4220E817175CB4EA007F5160 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		4220E819175CB534007F5160 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		4220E81A175CB534007F5160 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		429E70871757B7D100D2E42F /* TimerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		429E708A1757B7D100D2E42F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		429E708D1757B7D100D2E42F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -145,6 +150,9 @@
 		429E70901757B7D100D2E42F /* TimerTest */ = {
 			isa = PBXGroup;
 			children = (
+				4220E816175CB4EA007F5160 /* Model.xcdatamodeld */,
+				4220E819175CB534007F5160 /* Test.h */,
+				4220E81A175CB534007F5160 /* Test.m */,
 				4208129117592F590084E4BD /* FMDB */,
 				429E709C1757B7D100D2E42F /* IEAppDelegate.h */,
 				429E709D1757B7D100D2E42F /* IEAppDelegate.m */,
@@ -254,6 +262,8 @@
 				4208129E17592FB70084E4BD /* FMDatabasePool.m in Sources */,
 				4208129F17592FB70084E4BD /* FMDatabaseQueue.m in Sources */,
 				420812A017592FB70084E4BD /* FMResultSet.m in Sources */,
+				4220E818175CB4EA007F5160 /* Model.xcdatamodeld in Sources */,
+				4220E81B175CB534007F5160 /* Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +400,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4220E816175CB4EA007F5160 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4220E817175CB4EA007F5160 /* Model.xcdatamodel */,
+			);
+			currentVersion = 4220E817175CB4EA007F5160 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 429E707F1757B7D100D2E42F /* Project object */;
 }

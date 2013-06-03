@@ -1,49 +1,30 @@
 //
-//  IEAppDelegate.m
-//  TimerTest
+//  AppDelegate.m
+//  ViewTest
 //
-//  Created by AirMyac on 5/31/13.
+//  Created by AirMyac on 6/3/13.
 //  Copyright (c) 2013 com.katzlifehack. All rights reserved.
 //
 
-#import "IEAppDelegate.h"
-#import "Test.h"
+#import "AppDelegate.h"
 
-@implementation IEAppDelegate
+@implementation AppDelegate
 
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize managedObjectContext = _managedObjectContext;
 
-
-- (void)dealloc
-{
-    [super dealloc];
-}
-
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    // 初回起動用にDataStore用のDirectoryを作成する
-    NSURL *applicationFilesDirectory = [self applicationFilesDirectory];
-    NSError *error = nil;
-    if(![[NSFileManager defaultManager] createDirectoryAtPath:[applicationFilesDirectory path] withIntermediateDirectories:YES attributes:nil error:&error]){
-        NSLog(@"Couldn't create the data store directory.[%@, %@]", error, [error userInfo]);
-        abort();
-    }
-    
-    
-    //    Task *skypeTask = [[TaskForSkype alloc]init];
-//    [skypeTask execute];
-    
 }
 
-// Returns the directory the application uses to store the Core Data store file. This code uses a directory named "katz.CoreDataTest" in the user's Application Support directory.
+// Returns the directory the application uses to store the Core Data store file. This code uses a directory named "katz.ViewTest" in the user's Application Support directory.
 - (NSURL *)applicationFilesDirectory
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSURL *appSupportURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
-    return [appSupportURL URLByAppendingPathComponent:@"TimerTest"];
+    return [appSupportURL URLByAppendingPathComponent:@"katz.ViewTest"];
 }
 
 // Creates if necessary and returns the managed object model for the application.
@@ -53,7 +34,7 @@
         return _managedObjectModel;
     }
 	
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"ViewTest" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -74,7 +55,7 @@
     NSURL *applicationFilesDirectory = [self applicationFilesDirectory];
     NSError *error = nil;
     
-    NSURL *url = [applicationFilesDirectory URLByAppendingPathComponent:@"timer.sqlite"];
+    NSURL *url = [applicationFilesDirectory URLByAppendingPathComponent:@"main.sqlite"];
     
     NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
     if (![coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:url options:nil error:&error]) {
@@ -84,11 +65,10 @@
     
     _persistentStoreCoordinator = coordinator;
     
-    
     return _persistentStoreCoordinator;
 }
 
-// Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.)
+// Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) 
 - (NSManagedObjectContext *)managedObjectContext
 {
     if (_managedObjectContext) {
@@ -106,7 +86,7 @@
     }
     _managedObjectContext = [[NSManagedObjectContext alloc] init];
     [_managedObjectContext setPersistentStoreCoordinator:coordinator];
-    
+
     return _managedObjectContext;
 }
 
@@ -119,12 +99,6 @@
 // Performs the save action for the application, which is to send the save: message to the application's managed object context. Any encountered errors are presented to the user.
 - (IBAction)saveAction:(id)sender
 {
-    
-    // NSManagedObjectの生成
-    Test *taskSource = (Test*)[self createObject:@"Test"];
-    taskSource.hoge = @"task1";
-    taskSource.fuga = @"tdagdgd33221";
-    
     NSError *error = nil;
     
     if (![[self managedObjectContext] commitEditing]) {
@@ -134,18 +108,6 @@
     if (![[self managedObjectContext] save:&error]) {
         [[NSApplication sharedApplication] presentError:error];
     }
-    
-    NSFetchRequest *fetchRequest = [self createRequest:@"Test"];
-    NSArray *result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    for(Test *taskSource in result) {
-        NSLog(@"%@:%@", taskSource.hoge, taskSource.fuga);
-    }
-    
-    
-}
-
--(NSFetchRequest*)createRequest:(NSString*)entity_name{
-    return [[NSFetchRequest alloc] initWithEntityName:entity_name];
 }
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
@@ -167,13 +129,13 @@
     
     NSError *error = nil;
     if (![[self managedObjectContext] save:&error]) {
-        
-        // Customize this code block to include application-specific recovery steps.
+
+        // Customize this code block to include application-specific recovery steps.              
         BOOL result = [sender presentError:error];
         if (result) {
             return NSTerminateCancel;
         }
-        
+
         NSString *question = NSLocalizedString(@"Could not save changes while quitting. Quit anyway?", @"Quit without saves error question message");
         NSString *info = NSLocalizedString(@"Quitting now will lose any changes you have made since the last successful save", @"Quit without saves error question info");
         NSString *quitButton = NSLocalizedString(@"Quit anyway", @"Quit anyway button title");
@@ -183,62 +145,15 @@
         [alert setInformativeText:info];
         [alert addButtonWithTitle:quitButton];
         [alert addButtonWithTitle:cancelButton];
-        
+
         NSInteger answer = [alert runModal];
         
         if (answer == NSAlertAlternateReturn) {
             return NSTerminateCancel;
         }
     }
-    
+
     return NSTerminateNow;
 }
-
-
-
-/*
- *
- */
-- (void)run{
-    // Create the Timer
-    NSNumber *number = [[NSNumber alloc] initWithInt:1];
-    
-    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithObject:number forKey:@"count"];
-    NSTimer *timer = [NSTimer
-                      scheduledTimerWithTimeInterval:3.f
-                      target:self
-                      selector:@selector(polling:)
-                      userInfo:dic
-                      repeats:YES];
-    
-}
-
-// Polling処理
-- (void)polling: (NSTimer*)timer{
-    
-    NSNumber *number = [[timer userInfo] objectForKey:@"count"];
-    NSLog(@"count up:%@", number);
-    int sum = [number intValue];
-    sum = sum + 1;
-    [[timer userInfo] setObject:[[NSNumber alloc]initWithInt:sum] forKey:@"count"];
-    
-}
-
-// task test
-- (void)taskTest{
-    Task *task;
-    task = [[Task alloc] initWith:@"2012"];
-    [task execute];
-    task = [[TaskForSkype alloc] initWith:@"2013"];
-    [task execute];
-    task = [[TaskForFile alloc]init];
-    [task execute];
-    
-}
-
--(NSManagedObject*)createObject:(NSString*)entity_name{
-    return [NSEntityDescription insertNewObjectForEntityForName:entity_name inManagedObjectContext:self.managedObjectContext];
-}
-
 
 @end
