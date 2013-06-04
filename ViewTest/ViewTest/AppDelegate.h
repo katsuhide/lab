@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "TaskSource.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
@@ -17,5 +18,8 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 - (IBAction)saveAction:(id)sender;
+
+// Save
+-(void)save;
 
 @end

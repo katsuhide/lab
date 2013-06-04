@@ -17,6 +17,14 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    // 初回起動用にDataStore用のDirectoryの有無を確認して無ければ作成する
+    NSURL *applicationFilesDirectory = [self applicationFilesDirectory];
+    NSError *error = nil;
+    if(![[NSFileManager defaultManager] createDirectoryAtPath:[applicationFilesDirectory path] withIntermediateDirectories:YES attributes:nil error:&error]){
+        NSLog(@"Couldn't create the data store directory.[%@, %@]", error, [error userInfo]);
+        abort();
+    }
+
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "katz.ViewTest" in the user's Application Support directory.
@@ -155,5 +163,56 @@
 
     return NSTerminateNow;
 }
+
+// NSManagedObjectの生成
+-(NSManagedObject*)createObject:(NSString*)entity_name{
+    return [NSEntityDescription insertNewObjectForEntityForName:entity_name inManagedObjectContext:self.managedObjectContext];
+}
+
+// NSFetchRequestの生成
+-(NSFetchRequest*)createRequest:(NSString*)entity_name{
+    return [[NSFetchRequest alloc] initWithEntityName:entity_name];
+}
+
+// Save
+-(void)save{
+    NSError *error = nil;
+    if (![[self managedObjectContext] commitEditing]) {
+        NSLog(@"%@:%@ unable to commit editing before saving", [self class], NSStringFromSelector(_cmd));
+    }
+    if (![[self managedObjectContext] save:&error]) {
+        [[NSApplication sharedApplication] presentError:error];
+    }
+}
+
+
+// register method
+- (IBAction)registerAction:(id)sender{
+    // NSManagedObjectの生成
+    TaskSource *source = (TaskSource*)[self createObject:@"TaskSource"];
+    source.task_name = @"Other Task1";
+    source.task_type = @"other";
+    source.interval = @"10";
+    source.tags = @"tag1,tag2";
+    source.note_title = @"Other Task Note Title1";
+    source.update_time = [NSDate date];
+    [self save];
+}
+
+// get method
+- (IBAction)getAction:(id)sender{
+    NSFetchRequest *fetchRequest = [self createRequest:@"TaskSource"];
+    NSError *error = nil;
+    NSArray *result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if(!result){
+        NSLog(@"%@:%@", error, [error userInfo]);
+    }else{
+        for(TaskSource *taskSource in result) {
+            [taskSource print];
+        }
+    }
+}
+
+
 
 @end

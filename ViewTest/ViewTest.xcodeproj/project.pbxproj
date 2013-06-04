@@ -14,7 +14,8 @@
 		4220E83D175CBB1E007F5160 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4220E83C175CBB1E007F5160 /* AppDelegate.m */; };
 		4220E840175CBB1F007F5160 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4220E83E175CBB1F007F5160 /* MainMenu.xib */; };
 		4220E843175CBB1F007F5160 /* ViewTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4220E841175CBB1F007F5160 /* ViewTest.xcdatamodeld */; };
-		4220E84B175CBB60007F5160 /* Hoge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4220E84A175CBB60007F5160 /* Hoge.m */; };
+		42A5EA85175E18860058F3CF /* TaskSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A5EA84175E18860058F3CF /* TaskSource.m */; };
+		42A5EA88175E1C5E0058F3CF /* MyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A5EA87175E1C5E0058F3CF /* MyController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +33,10 @@
 		4220E83C175CBB1E007F5160 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4220E83F175CBB1F007F5160 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4220E842175CBB1F007F5160 /* ViewTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ViewTest.xcdatamodel; sourceTree = "<group>"; };
-		4220E849175CBB60007F5160 /* Hoge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hoge.h; sourceTree = "<group>"; };
-		4220E84A175CBB60007F5160 /* Hoge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hoge.m; sourceTree = "<group>"; };
+		42A5EA83175E18860058F3CF /* TaskSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskSource.h; sourceTree = "<group>"; };
+		42A5EA84175E18860058F3CF /* TaskSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskSource.m; sourceTree = "<group>"; };
+		42A5EA86175E1C5E0058F3CF /* MyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyController.h; sourceTree = "<group>"; };
+		42A5EA87175E1C5E0058F3CF /* MyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,12 +90,14 @@
 		4220E82F175CBB1E007F5160 /* ViewTest */ = {
 			isa = PBXGroup;
 			children = (
+				42A5EA83175E18860058F3CF /* TaskSource.h */,
+				42A5EA86175E1C5E0058F3CF /* MyController.h */,
+				42A5EA87175E1C5E0058F3CF /* MyController.m */,
+				42A5EA84175E18860058F3CF /* TaskSource.m */,
 				4220E83B175CBB1E007F5160 /* AppDelegate.h */,
 				4220E83C175CBB1E007F5160 /* AppDelegate.m */,
 				4220E83E175CBB1F007F5160 /* MainMenu.xib */,
 				4220E841175CBB1F007F5160 /* ViewTest.xcdatamodeld */,
-				4220E849175CBB60007F5160 /* Hoge.h */,
-				4220E84A175CBB60007F5160 /* Hoge.m */,
 				4220E830175CBB1E007F5160 /* Supporting Files */,
 			);
 			path = ViewTest;
@@ -177,7 +182,8 @@
 				4220E836175CBB1E007F5160 /* main.m in Sources */,
 				4220E83D175CBB1E007F5160 /* AppDelegate.m in Sources */,
 				4220E843175CBB1F007F5160 /* ViewTest.xcdatamodeld in Sources */,
-				4220E84B175CBB60007F5160 /* Hoge.m in Sources */,
+				42A5EA85175E18860058F3CF /* TaskSource.m in Sources */,
+				42A5EA88175E1C5E0058F3CF /* MyController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +319,7 @@
 				4220E848175CBB1F007F5160 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
