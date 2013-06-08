@@ -8,13 +8,13 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ViewTest/AppDelegate.m"
-         timestampString = "392391347.368866"
+         timestampString = "392402803.707253"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "79"
-         endingLineNumber = "79"
-         landmarkName = "-hoge:"
-         landmarkType = "5">
+         startingLineNumber = "81"
+         endingLineNumber = "81"
+         landmarkName = "@implementation AppDelegate"
+         landmarkType = "3">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

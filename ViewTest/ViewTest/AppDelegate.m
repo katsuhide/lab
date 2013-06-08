@@ -18,6 +18,8 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     
+    NSLog(@"hoge");
+    
     NSMutableArray *objects = [NSMutableArray array];
     
     for (int i = 0; i < 7; i++) {
