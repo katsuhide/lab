@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4200E69C1763B31D00B5ACBD /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4200E69A1763B31D00B5ACBD /* FirstViewController.m */; };
+		4200E69D1763B31D00B5ACBD /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4200E69B1763B31D00B5ACBD /* FirstViewController.xib */; };
+		4200E6A11763B35100B5ACBD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4200E69F1763B35100B5ACBD /* SecondViewController.m */; };
+		4200E6A21763B35100B5ACBD /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4200E6A01763B35100B5ACBD /* SecondViewController.xib */; };
+		4200E6A51763B46E00B5ACBD /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4200E6A41763B46E00B5ACBD /* AppController.m */; };
 		4220E82A175CBB1E007F5160 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4220E829175CBB1E007F5160 /* Cocoa.framework */; };
 		4220E834175CBB1E007F5160 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4220E832175CBB1E007F5160 /* InfoPlist.strings */; };
 		4220E836175CBB1E007F5160 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4220E835175CBB1E007F5160 /* main.m */; };
@@ -20,6 +25,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4200E6991763B31D00B5ACBD /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ../FirstViewController.h; sourceTree = "<group>"; };
+		4200E69A1763B31D00B5ACBD /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ../FirstViewController.m; sourceTree = "<group>"; };
+		4200E69B1763B31D00B5ACBD /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FirstViewController.xib; path = ../FirstViewController.xib; sourceTree = "<group>"; };
+		4200E69E1763B35100B5ACBD /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		4200E69F1763B35100B5ACBD /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		4200E6A01763B35100B5ACBD /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		4200E6A31763B46E00B5ACBD /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		4200E6A41763B46E00B5ACBD /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		4220E826175CBB1E007F5160 /* ViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4220E829175CBB1E007F5160 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4220E82C175CBB1E007F5160 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -93,13 +106,21 @@
 		4220E82F175CBB1E007F5160 /* ViewTest */ = {
 			isa = PBXGroup;
 			children = (
+				4200E6991763B31D00B5ACBD /* FirstViewController.h */,
+				4200E69A1763B31D00B5ACBD /* FirstViewController.m */,
+				4200E69B1763B31D00B5ACBD /* FirstViewController.xib */,
 				42A5EA83175E18860058F3CF /* TaskSource.h */,
 				42A5EA86175E1C5E0058F3CF /* MyController.h */,
 				42A5EA87175E1C5E0058F3CF /* MyController.m */,
 				42A5EA84175E18860058F3CF /* TaskSource.m */,
+				4200E6A31763B46E00B5ACBD /* AppController.h */,
+				4200E6A41763B46E00B5ACBD /* AppController.m */,
 				4220E83B175CBB1E007F5160 /* AppDelegate.h */,
 				4220E83C175CBB1E007F5160 /* AppDelegate.m */,
 				4220E83E175CBB1F007F5160 /* MainMenu.xib */,
+				4200E69E1763B35100B5ACBD /* SecondViewController.h */,
+				4200E69F1763B35100B5ACBD /* SecondViewController.m */,
+				4200E6A01763B35100B5ACBD /* SecondViewController.xib */,
 				42DE0E6717630B0F00A2F709 /* ViewDataModel.h */,
 				42DE0E6817630B0F00A2F709 /* ViewDataModel.m */,
 				4220E841175CBB1F007F5160 /* ViewTest.xcdatamodeld */,
@@ -174,6 +195,8 @@
 				4220E834175CBB1E007F5160 /* InfoPlist.strings in Resources */,
 				4220E83A175CBB1E007F5160 /* Credits.rtf in Resources */,
 				4220E840175CBB1F007F5160 /* MainMenu.xib in Resources */,
+				4200E69D1763B31D00B5ACBD /* FirstViewController.xib in Resources */,
+				4200E6A21763B35100B5ACBD /* SecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +213,9 @@
 				42A5EA85175E18860058F3CF /* TaskSource.m in Sources */,
 				42A5EA88175E1C5E0058F3CF /* MyController.m in Sources */,
 				42DE0E6917630B0F00A2F709 /* ViewDataModel.m in Sources */,
+				4200E69C1763B31D00B5ACBD /* FirstViewController.m in Sources */,
+				4200E6A11763B35100B5ACBD /* SecondViewController.m in Sources */,
+				4200E6A51763B46E00B5ACBD /* AppController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

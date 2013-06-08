@@ -12,7 +12,9 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSPanel *subWindow;
 @property (assign) IBOutlet NSTableView *table;
+@property (assign) IBOutlet NSTextField *text;
 @property (assign) IBOutlet NSArrayController *arrayController;
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;

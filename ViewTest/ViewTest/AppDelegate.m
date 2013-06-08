@@ -48,6 +48,26 @@
 
 }
 
+-(IBAction)opneView:(id)sender{
+    NSLog(@"open test");
+    [_subWindow setWorksWhenModal:YES];
+    [_subWindow setLevel:10];
+    [_subWindow orderFront:sender];
+    
+}
+
+-(IBAction)modal:(id)sender{
+    NSLog(@"modal test");
+    [_subWindow setWorksWhenModal:YES];
+    [_subWindow setLevel:10];
+}
+
+
+-(IBAction)viewtest:(id)sender{
+    NSLog(@"view test");
+    [_subWindow close];
+}
+
 - (IBAction)hoge:(id)sender{
 
     // 選択された行番号を取得
