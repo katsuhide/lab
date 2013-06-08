@@ -9,8 +9,12 @@
 #import <Cocoa/Cocoa.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
+//{
+//    IBOutlet NSArrayController *hogeArrayController;
+//}
 
 @property (assign) IBOutlet NSWindow *window;
+
 
 // Added for Core Data
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;

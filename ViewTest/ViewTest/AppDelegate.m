@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewDataModel.h"
 
 @implementation AppDelegate
 
@@ -16,6 +17,24 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    
+    NSMutableArray *objects = [NSMutableArray array];
+    
+    for (int i = 0; i < 7; i++) {
+        ViewDataModel *model = [[ViewDataModel alloc] init];
+        NSMutableArray *array = [[NSMutableArray alloc]init];
+        [array addObject:@"aaaaaa"];
+        [array addObject:@"hoge"];
+        [array addObject:@"fuga"];
+        model.name = array;
+        model.hoge = [NSString stringWithFormat:@"hoge %@", @"hoge"];
+        model.fuga = [NSString stringWithFormat:@"fuga %d", i];
+        [objects addObject:model];
+    }
+    
+    
+    [_arrayController setContent:objects];
+    
     // Insert code here to initialize your application
     // 初回起動用にDataStore用のDirectoryの有無を確認して無ければ作成する
     NSURL *applicationFilesDirectory = [self applicationFilesDirectory];
@@ -24,6 +43,37 @@
         NSLog(@"Couldn't create the data store directory.[%@, %@]", error, [error userInfo]);
         abort();
     }
+
+}
+
+- (IBAction)hoge:(id)sender{
+
+    // 選択された行番号を取得
+    NSInteger *row = [_table selectedRow];
+    NSLog(@"row:%d", row);
+    // arrayControllerの選択を指定された番号にセット
+    [_arrayController setSelectionIndex:row];
+    // 選択されたデータを取得
+    NSMutableArray *object = [[NSMutableArray alloc]init];
+    object = [_arrayController selectedObjects];
+    for(ViewDataModel *model in object){
+        NSLog(@"%@", model.fuga);
+    }
+
+    // 選択された行を削除
+    [_arrayController removeObjectAtArrangedObjectIndex:row];
+    
+    // 追加用のデータモデルを定義
+    ViewDataModel *model = [[ViewDataModel alloc]init];
+    NSMutableArray *array = [[NSMutableArray alloc]init];
+    [array addObject:@"aaaaaa"];
+    [array addObject:@"hoge"];
+    [array addObject:@"fuga"];
+    model.name = array;
+    model.hoge = [NSString stringWithFormat:@"hoge %@", @"dagagadag"];
+    model.fuga = [NSString stringWithFormat:@"fuga %d", 1234];
+    // データを追加
+//    [_arrayController addObject:model];
 
 }
 
