@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'ViewTest3' target in the 'ViewTest3' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
