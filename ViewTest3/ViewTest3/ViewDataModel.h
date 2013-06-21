@@ -14,5 +14,6 @@
 @property (assign) NSInteger status;
 @property (retain) NSString *type;
 @property (retain) NSString *name;
+@property (retain) NSImage  *imageName;
 
 @end
