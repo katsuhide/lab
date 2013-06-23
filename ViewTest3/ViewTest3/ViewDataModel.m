@@ -12,22 +12,27 @@
 
 -(NSImage*)getImageName{
     
-//    NSString *file = @"/Users/AirMyac/github/lab/ViewTest3/ViewTest3/ng.png";
-//    NSImage *image = [[NSImage alloc]initByReferencingFile:file];
-//    NSString* path = [[NSBundle mainBundle] pathForResource:@"clear" ofType:@"png"];
-//    NSLog(@"%@", path);
-    
     NSString *file;
     if((self.status % 2) == 0){
-//        file = @"/Users/AirMyac/github/lab/ViewTest3/ViewTest3/clear.png";
-        file = [[NSBundle mainBundle] pathForResource:@"clear" ofType:@"png"];
+        file = [[NSBundle mainBundle] pathForResource:@"Play" ofType:@"tif"];
     }else{
-//        file = @"/Users/AirMyac/github/lab/ViewTest3/ViewTest3/ng.png";
-        file = [[NSBundle mainBundle] pathForResource:@"ng" ofType:@"png"];
+        file = [[NSBundle mainBundle] pathForResource:@"Pause" ofType:@"tif"];
     }
     NSImage *image = [[NSImage alloc]initByReferencingFile:file];
-
     return image;
 }
+
+-(NSImage*)getTypeImage{
+    
+    NSString *file;
+    if([self.type isEqualToString:@"skype"]){
+        file = [[NSBundle mainBundle] pathForResource:@"skype" ofType:@"png"];
+    }else{
+        file = [[NSBundle mainBundle] pathForResource:@"documents_folder" ofType:@"png"];
+    }
+    NSImage *image = [[NSImage alloc]initByReferencingFile:file];
+    return image;
+}
+
 
 @end

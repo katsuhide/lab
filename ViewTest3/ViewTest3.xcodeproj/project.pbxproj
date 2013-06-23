@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420EC0EF1776C0330088B5D4 /* finder_r.png in Resources */ = {isa = PBXBuildFile; fileRef = 420EC0ED1776C0330088B5D4 /* finder_r.png */; };
+		420EC0F01776C0330088B5D4 /* skype_r.png in Resources */ = {isa = PBXBuildFile; fileRef = 420EC0EE1776C0330088B5D4 /* skype_r.png */; };
+		420EC0FB17775EBA0088B5D4 /* Action.tif in Resources */ = {isa = PBXBuildFile; fileRef = 420EC0F117775EBA0088B5D4 /* Action.tif */; };
+		420EC0FC17775EBA0088B5D4 /* Block.tif in Resources */ = {isa = PBXBuildFile; fileRef = 420EC0F217775EBA0088B5D4 /* Block.tif */; };
+		420EC0FD17775EBA0088B5D4 /* Caution 1.tif in Resources */ = {isa = PBXBuildFile; fileRef = 420EC0F317775EBA0088B5D4 /* Caution 1.tif */; };
+		420EC0FE17775EBA0088B5D4 /* Fast forward.tif in Resources */ = {isa = PBXBuildFile; fileRef = 420EC0F417775EBA0088B5D4 /* Fast forward.tif */; };
+		420EC0FF17775EBA0088B5D4 /* Info.tif in Resources */ = {isa = PBXBuildFile; fileRef = 420EC0F517775EBA0088B5D4 /* Info.tif */; };
+		420EC10017775EBA0088B5D4 /* Pause.tif in Resources */ = {isa = PBXBuildFile; fileRef = 420EC0F617775EBA0088B5D4 /* Pause.tif */; };
+		420EC10117775EBA0088B5D4 /* Play.tif in Resources */ = {isa = PBXBuildFile; fileRef = 420EC0F717775EBA0088B5D4 /* Play.tif */; };
+		420EC10217775EBA0088B5D4 /* Plus.tif in Resources */ = {isa = PBXBuildFile; fileRef = 420EC0F817775EBA0088B5D4 /* Plus.tif */; };
+		420EC10317775EBA0088B5D4 /* Question.tif in Resources */ = {isa = PBXBuildFile; fileRef = 420EC0F917775EBA0088B5D4 /* Question.tif */; };
+		420EC10417775EBA0088B5D4 /* Record.tif in Resources */ = {isa = PBXBuildFile; fileRef = 420EC0FA17775EBA0088B5D4 /* Record.tif */; };
+		420EC109177762C60088B5D4 /* skype_squre.png in Resources */ = {isa = PBXBuildFile; fileRef = 420EC105177762C60088B5D4 /* skype_squre.png */; };
+		420EC10A177762C60088B5D4 /* skype.png in Resources */ = {isa = PBXBuildFile; fileRef = 420EC106177762C60088B5D4 /* skype.png */; };
+		420EC10B177762C60088B5D4 /* documents_folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 420EC107177762C60088B5D4 /* documents_folder.png */; };
+		420EC10C177762C60088B5D4 /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 420EC108177762C60088B5D4 /* folder.png */; };
 		4235D88A1770C03300053483 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4235D8891770C03300053483 /* Cocoa.framework */; };
 		4235D8941770C03300053483 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4235D8921770C03300053483 /* InfoPlist.strings */; };
 		4235D8961770C03300053483 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4235D8951770C03300053483 /* main.m */; };
@@ -24,6 +40,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		420EC0ED1776C0330088B5D4 /* finder_r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finder_r.png; sourceTree = "<group>"; };
+		420EC0EE1776C0330088B5D4 /* skype_r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skype_r.png; sourceTree = "<group>"; };
+		420EC0F117775EBA0088B5D4 /* Action.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Action.tif; sourceTree = "<group>"; };
+		420EC0F217775EBA0088B5D4 /* Block.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Block.tif; sourceTree = "<group>"; };
+		420EC0F317775EBA0088B5D4 /* Caution 1.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Caution 1.tif"; sourceTree = "<group>"; };
+		420EC0F417775EBA0088B5D4 /* Fast forward.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Fast forward.tif"; sourceTree = "<group>"; };
+		420EC0F517775EBA0088B5D4 /* Info.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Info.tif; sourceTree = "<group>"; };
+		420EC0F617775EBA0088B5D4 /* Pause.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Pause.tif; sourceTree = "<group>"; };
+		420EC0F717775EBA0088B5D4 /* Play.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Play.tif; sourceTree = "<group>"; };
+		420EC0F817775EBA0088B5D4 /* Plus.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Plus.tif; sourceTree = "<group>"; };
+		420EC0F917775EBA0088B5D4 /* Question.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Question.tif; sourceTree = "<group>"; };
+		420EC0FA17775EBA0088B5D4 /* Record.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Record.tif; sourceTree = "<group>"; };
+		420EC105177762C60088B5D4 /* skype_squre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skype_squre.png; sourceTree = "<group>"; };
+		420EC106177762C60088B5D4 /* skype.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skype.png; sourceTree = "<group>"; };
+		420EC107177762C60088B5D4 /* documents_folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = documents_folder.png; sourceTree = "<group>"; };
+		420EC108177762C60088B5D4 /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder.png; sourceTree = "<group>"; };
 		4235D8861770C03300053483 /* ViewTest3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewTest3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4235D8891770C03300053483 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4235D88C1770C03300053483 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -136,6 +168,22 @@
 		4235D8AA1774AE7800053483 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				420EC0F117775EBA0088B5D4 /* Action.tif */,
+				420EC0F217775EBA0088B5D4 /* Block.tif */,
+				420EC0F317775EBA0088B5D4 /* Caution 1.tif */,
+				420EC0F417775EBA0088B5D4 /* Fast forward.tif */,
+				420EC0F517775EBA0088B5D4 /* Info.tif */,
+				420EC0F617775EBA0088B5D4 /* Pause.tif */,
+				420EC0F717775EBA0088B5D4 /* Play.tif */,
+				420EC105177762C60088B5D4 /* skype_squre.png */,
+				420EC106177762C60088B5D4 /* skype.png */,
+				420EC107177762C60088B5D4 /* documents_folder.png */,
+				420EC108177762C60088B5D4 /* folder.png */,
+				420EC0F817775EBA0088B5D4 /* Plus.tif */,
+				420EC0F917775EBA0088B5D4 /* Question.tif */,
+				420EC0FA17775EBA0088B5D4 /* Record.tif */,
+				420EC0ED1776C0330088B5D4 /* finder_r.png */,
+				420EC0EE1776C0330088B5D4 /* skype_r.png */,
 				4235D8AB1774AEF000053483 /* clear.png */,
 				4235D8AC1774AEF000053483 /* dublecircle.png */,
 				4235D8AD1774AEF000053483 /* minus.png */,
@@ -206,6 +254,22 @@
 				4235D8B41774AEF000053483 /* ng.png in Resources */,
 				4235D8B51774AEF000053483 /* plus.png in Resources */,
 				4235D8B61774AEF000053483 /* right.png in Resources */,
+				420EC0EF1776C0330088B5D4 /* finder_r.png in Resources */,
+				420EC0F01776C0330088B5D4 /* skype_r.png in Resources */,
+				420EC0FB17775EBA0088B5D4 /* Action.tif in Resources */,
+				420EC0FC17775EBA0088B5D4 /* Block.tif in Resources */,
+				420EC0FD17775EBA0088B5D4 /* Caution 1.tif in Resources */,
+				420EC0FE17775EBA0088B5D4 /* Fast forward.tif in Resources */,
+				420EC0FF17775EBA0088B5D4 /* Info.tif in Resources */,
+				420EC10017775EBA0088B5D4 /* Pause.tif in Resources */,
+				420EC10117775EBA0088B5D4 /* Play.tif in Resources */,
+				420EC10217775EBA0088B5D4 /* Plus.tif in Resources */,
+				420EC10317775EBA0088B5D4 /* Question.tif in Resources */,
+				420EC10417775EBA0088B5D4 /* Record.tif in Resources */,
+				420EC109177762C60088B5D4 /* skype_squre.png in Resources */,
+				420EC10A177762C60088B5D4 /* skype.png in Resources */,
+				420EC10B177762C60088B5D4 /* documents_folder.png in Resources */,
+				420EC10C177762C60088B5D4 /* folder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +419,7 @@
 				4235D8A51770C03300053483 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

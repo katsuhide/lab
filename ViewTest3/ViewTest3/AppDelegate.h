@@ -13,8 +13,12 @@
 
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSButton *button;
+@property (assign) IBOutlet NSButton *registerBtn;
+@property (assign) IBOutlet NSButton *infoBtn;
+@property (assign) IBOutlet NSButton *deleteBtn;
 @property (assign) IBOutlet NSTableView *table;
 @property (assign) BOOL imageFlag;
+@property (assign) NSTextField *timeLabel;
 @property (assign) IBOutlet NSArrayController *arrayController;
 
 -(IBAction)changeBtnImage:(id)sender;

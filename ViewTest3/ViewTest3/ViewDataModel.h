@@ -15,5 +15,8 @@
 @property (retain) NSString *type;
 @property (retain) NSString *name;
 @property (retain) NSImage  *imageName;
+@property (retain) NSImage  *typeImage;
+@property (retain) NSString *executed;
+@property (retain) NSString *note;
 
 @end
