@@ -42,22 +42,8 @@
     NSString *copyToName = @"skype.db";
     NSString *copyToFile = [[copyToPath stringByAppendingPathComponent:copyToName] stringByExpandingTildeInPath];
 
-    NSLog(@"From:%@, To:%@", copyFromFile, copyToFile);
-
-//    NSString *command = @"/bin/sleep";
-//    NSString *argument = @"3";
-
     NSString *command = @"/usr/bin/rsync";
-    NSArray *arguments = [NSArray arrayWithObjects:copyFromFile, copyToFile, nil];
-    
-    // user$ man ls を実行してみる
-//    [task setLaunchPath:@"/usr/bin/man"];
-//    [task setArguments:[NSArray arrayWithObjects:@"ls", nil]];
-    
-    // user$ ls -la でDesktopのファイルを一覧する場合はこんな感じ
-//    [task setCurrentDirectoryPath:[NSHomeDirectory() stringByAppendingPathComponent:@"Desktop"]];
-//    [task setLaunchPath:@"/bin/ls"];
-//    [task setArguments:[NSArray arrayWithObjects:@"-la", nil]];
+    NSArray *arguments = [NSArray arrayWithObjects:@"-v", copyFromFile, copyToFile, nil];
     
     [task setLaunchPath:command];
     [task setArguments:arguments];
@@ -66,26 +52,19 @@
     // コマンドが終了するのを待たずに、すぐに処理が返ってくる
     [task launch];
     
-    NSLog(@"return");
-    
     // コマンドの結果を取得
-    // readDataToEndOfFile によって、実行が終了するまで待ってくれる。
-    // コマンドの実行結果に応じて、標準出力と標準エラーのどちらかにデータが入っている。
     NSData *data = [[outPipe fileHandleForReading] readDataToEndOfFile];
-    if (data != nil && [data length])
-    {
+    if (data != nil && [data length]){  // 成功の場合
         NSString *strOut = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         NSLog(@"%@", strOut);
     }
     
     data = [[errPipe fileHandleForReading] readDataToEndOfFile];
-    if (data != nil && [data length])
-    {
+    if (data != nil && [data length]){  // 失敗の場合
         NSString *strErr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         NSLog(@"ERROR:%@", strErr);
     }
     
-    NSLog(@"command executed.");
 }
 
 
