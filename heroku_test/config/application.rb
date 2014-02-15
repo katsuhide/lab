@@ -12,9 +12,25 @@ module HerokuTest
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
-    # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    # LESS
+    # config.app_generators.stylesheet_engine :less
+    # config.less.paths << "#{Rails.root}/lib/less/protractor/stylesheets"
+    # config.less.compress = true
+    config.assets.compress = true
+    config.assets.initialize_on_precompile=false # herokuでasset:precomileエラー対策
+
+    # Set timezone
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local
+
+    # generatorの設定
+    config.generators do |g|
+      g.orm :active_record
+      g.template_engine :haml
+      g.test_framework  :rspec, :fixture => true
+      g.fixture_replacement :factory_girl, :dir => "spec/factories"
+    end
+
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
